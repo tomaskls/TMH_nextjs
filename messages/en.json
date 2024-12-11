@@ -1,0 +1,12 @@
+{
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "blog": "Blog",
+      "docs": "Documentation",
+      "seo": "SEO",
+      "sponsor": "Sponsor",
+      "search": "Search...",
+      "company": "Tomorrow's Media House"
+    }
+  }
