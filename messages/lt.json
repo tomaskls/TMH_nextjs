@@ -1,12 +1,13 @@
 {
-    "navigation": {
-      "home": "Pradžia",
-      "about": "Apie",
-      "blog": "Blogas",
-      "docs": "Dokumentacija",
-      "seo": "SEO",
-      "sponsor": "Paremti",
-      "search": "Ieškoti...",
-      "company": "Rytojaus Medijos Namai"
-    }
+  "navigation": {
+    "home": "Pradžia",
+    "about": "Apie",
+    "websites": "Svetainės",
+    "seo": "SEO",
+    "adds": "Reklama",
+    "e-stores": "E-parduotuvės",
+    "blog": "Blogas",
+    "contact": "Susisiekite",
+    "company": "Tomorows media house"
   }
+}

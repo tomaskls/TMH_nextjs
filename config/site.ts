@@ -4,26 +4,23 @@ export const siteConfig = {
   name: "Next.js + NextUI",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
-    { label: "home", href: "/" },
-    { label: "about", href: "/about" },
-    { label: "blog", href: "/blog" },
-    { label: "docs", href: "/docs" },
+    { label: "about", href: "/" },
+    { label: "websites", href: "/websites" },
     { label: "seo", href: "/seo" },
+    { label: "adds", href: "/adds" },
+    { label: "e-stores", href: "/e-stores" },
+    { label: "blog", href: "/blog" }
   ],
-   
   
   navMenuItems: [
-    { label: "home", href: "/" },
-    { label: "about", href: "/about" },
-    { label: "blog", href: "/blog" },
-    { label: "docs", href: "/docs" },
+    { label: "about", href: "/" },
+    { label: "websites", href: "/websites" },
     { label: "seo", href: "/seo" },
+    { label: "adds", href: "/adds" },
+    { label: "e-stores", href: "/e-stores" },
+    { label: "blog", href: "/blog" }
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    contact: "/contact"
   },
 };

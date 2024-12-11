@@ -29,20 +29,25 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'lt' }];
 }
 
-export default async function LocaleLayout({ 
-  children,
-  params: { locale }
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  console.log("Current locale:", locale); 
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch  {
-    notFound();
-  }
+
+  export default async function LocaleLayout({ 
+    children,
+    params
+  }: {
+    children: React.ReactNode;
+    params: { locale: string };
+  }) {
+    const resolvedParams = await params;
+    const locale = resolvedParams.locale;
+    
+    let messages;
+    try {
+      messages = (await import(`../../messages/${locale}.json`)).default;
+    } catch  {
+      notFound();
+    }
+    // ... likęs kodas
+  // ... likęs kodas
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
