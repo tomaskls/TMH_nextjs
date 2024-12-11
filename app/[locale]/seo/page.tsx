@@ -1,58 +1,14 @@
 "use client"
 import React from "react";
 import { Card, CardBody, CardFooter, Button } from "@nextui-org/react";
-
-interface SEOService {
-  title: string;
-  services: string[];
-}
-
-const seoServices: SEOService[] = [
-  {
-    title: "Techninė SEO optimizacija",
-    services: [
-      "Svetainės greičio optimizavimas",
-      "Mobiliosios versijos optimizavimas",
-      "Svetainės struktūros gerinimas",
-      "XML sitemap sukūrimas",
-      "Robots.txt konfigūravimas"
-    ]
-  },
-  {
-    title: "Turinio optimizacija",
-    services: [
-      "Raktažodžių tyrimas ir analizė",
-      "Turinio kūrimas ir optimizavimas",
-      "Meta aprašymų rašymas",
-      "URL struktūros optimizavimas",
-      "Paveikslėlių optimizavimas"
-    ]
-  },
-  {
-    title: "Off-page SEO",
-    services: [
-      "Nuorodų strategijos kūrimas",
-      "Kokybišku backlinks gavimas",
-      "Socialinių tinklų optimizacija",
-      "Google My Business tvarkymas",
-      "Lokalios SEO strategijos"
-    ]
-  },
-  {
-    title: "Analitika ir stebėjimas",
-    services: [
-      "Google Analytics įdiegimas",
-      "Google Search Console naudojimas",
-      "Pozicijų stebėjimas",
-      "Konkurentų analizė",
-      "Reguliarios ataskaitos"
-    ]
-  }
-];
+import { useTranslations } from 'next-intl';
+import { seoServices } from '@/components/constants/seoServices';
 
 const SEOServicesCards = () => {
+  const t = useTranslations('SEOServices');
+
   const handleAuditRequest = () => {
-    console.log("Užsakytas nemokamas auditas");
+    console.log("Audit requested");
   };
 
   return (
@@ -79,15 +35,15 @@ const SEOServicesCards = () => {
               from-purple-200 to-blue-200
               dark:from-purple-300 dark:to-blue-300
               bg-clip-text text-transparent">
-              {service.title}
+              {t(service.titleKey)}
             </h3>
             <ul className="list-disc pl-4 space-y-2">
-              {service.services.map((item, i) => (
+              {service.servicesKeys.map((key, i) => (
                 <li key={i} 
                   className="text-sm text-slate-200 
                     dark:text-slate-300
                     transition-colors duration-200">
-                  {item}
+                  {t(key)}
                 </li>
               ))}
             </ul>
@@ -104,9 +60,9 @@ const SEOServicesCards = () => {
                 transform transition-all duration-300 
                 hover:scale-[1.02] active:scale-[0.98]
                 hover:shadow-xl"
-              onClick={handleAuditRequest}
+              onPress={handleAuditRequest}
             >
-              Užsakyti nemokamą auditą
+              {t('common.auditButton')}
             </Button>
           </CardFooter>
         </Card>
