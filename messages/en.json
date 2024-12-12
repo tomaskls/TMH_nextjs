@@ -10,42 +10,65 @@
     "contact": "Contact us",
     "company": "Tomorow's media house"
   },
-
-    "SEOServices": {
-      "technical": {
-        "title": "Technical SEO Optimization",
-        "speed": "Website Speed Optimization",
-        "mobile": "Mobile Version Optimization",
-        "structure": "Website Structure Improvement",
-        "sitemap": "XML Sitemap Creation",
-        "robots": "Robots.txt Configuration"
-      },
-      "content": {
-        "title": "Content Optimization",
-        "keywords": "Keyword Research and Analysis",
-        "optimization": "Content Creation and Optimization",
-        "meta": "Meta Descriptions Writing",
-        "url": "URL Structure Optimization",
-        "images": "Image Optimization"
-      },
-      "offpage": {
-        "title": "Off-page SEO",
-        "strategy": "Link Building Strategy",
-        "backlinks": "Quality Backlinks Acquisition",
-        "social": "Social Media Optimization",
-        "gmb": "Google My Business Management",
-        "local": "Local SEO Strategies"
-      },
-      "analytics": {
-        "title": "Analytics and Monitoring",
-        "ga": "Google Analytics Implementation",
-        "gsc": "Google Search Console Usage",
-        "positions": "Position Tracking",
-        "competitors": "Competitor Analysis",
-        "reports": "Regular Reports"
-      },
-      "common": {
-        "auditButton": "Order Free Audit"
-      }
+  "SEOServices": {
+    "technical": {
+      "title": "Technical SEO Optimization",
+      "speed": "Website Speed Optimization",
+      "mobile": "Mobile Version Optimization",
+      "structure": "Website Structure Improvement",
+      "sitemap": "XML Sitemap Creation",
+      "robots": "Robots.txt Configuration"
+    },
+    "content": {
+      "title": "Content Optimization",
+      "keywords": "Keyword Research and Analysis",
+      "optimization": "Content Creation and Optimization",
+      "meta": "Meta Descriptions Writing",
+      "url": "URL Structure Optimization",
+      "images": "Image Optimization"
+    },
+    "offpage": {
+      "title": "Off-page SEO",
+      "strategy": "Link Building Strategy",
+      "backlinks": "Quality Backlinks Acquisition",
+      "social": "Social Media Optimization",
+      "gmb": "Google My Business Management",
+      "local": "Local SEO Strategies"
+    },
+    "analytics": {
+      "title": "Analytics and Monitoring",
+      "ga": "Google Analytics Implementation",
+      "gsc": "Google Search Console Usage",
+      "positions": "Position Tracking",
+      "competitors": "Competitor Analysis",
+      "reports": "Regular Reports"
+    },
+    "common": {
+      "auditButton": "Order Free Audit"
     }
-  }
+  },
+      "contact": {
+        "title": "Contact Us",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "message": "Message",
+        "optional": "Optional",
+        "sendButton": "Send",
+        "sending": "Sending...",
+        "or": "or fill out the form",
+        "workHours": "Working hours: Mon-Fri 9:00 - 18:00",
+        "callButton": "Call",
+        "successTitle": "Success!",
+        "successMessage": "Your message has been sent successfully. We will contact you soon.",
+        "closeButton": "Close",
+        "errorMessage": "An error occurred while sending the message. Please try again.",
+        "placeholders": {
+          "name": "Enter your name",
+          "email": "your@email.com",
+          "phone": "+370...",
+          "message": "Your message..."
+        }
+      }
+      }
+    

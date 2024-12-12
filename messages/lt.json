@@ -47,6 +47,31 @@
       "common": {
         "auditButton": "Užsakyti nemokamą auditą"
       }
+    },
+
+  "contact": {
+    "title": "Susisiekite su mumis",
+    "name": "Vardas",
+    "email": "El. paštas",
+    "phone": "Telefono numeris",
+    "message": "Žinutė",
+    "optional": "Neprivalomas",
+    "sendButton": "Siųsti",
+    "sending": "Siunčiama...",
+    "or": "arba užpildykite formą",
+    "workHours": "Darbo laikas: I-V 9:00 - 18:00",
+    "callButton": "Skambinti",
+    "successTitle": "Sėkmė!",
+    "successMessage": "Jūsų žinutė sėkmingai išsiųsta. Mes su jumis susisieksime artimiausiu metu.",
+    "closeButton": "Uždaryti",
+    "errorMessage": "Įvyko klaida siunčiant žinutę. Bandykite dar kartą.",
+    "placeholders": {
+      "name": "Įveskite savo vardą",
+      "email": "jusu@pastas.lt",
+      "phone": "+370...",
+      "message": "Jūsų žinutė..."
     }
   }
+  }
+
 
