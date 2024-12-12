@@ -1,23 +1,33 @@
 "use client"
-import React from "react";
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+import React from 'react';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { PlatformSection } from '@/components/PlatformSection';
+import { ConsultationButton } from '@/components/ConsultationButton';
+import { googleServices, metaServices } from '@/components/constants/addSevises';
 
-export default function App() {
+const AdsServices: React.FC = () => {
   return (
-    <Card className="py-4">
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <p className="text-tiny uppercase font-bold">Daily Mix</p>
-        <small className="text-default-500">12 Tracks</small>
-        <h4 className="font-bold text-large">Frontend Radio</h4>
-      </CardHeader>
-      <CardBody className="overflow-visible py-2">
-        <Image
-          alt="Card background"
-          className="object-cover rounded-xl"
-          src="https://nextui.org/images/hero-card-complete.jpeg"
-          width={270}
+    <ErrorBoundary>
+      <div className="min-h-screen flex flex-col lg:flex-row bg-gradient-to-br from-teal-500 via-fuchsia-500 to-amber-500">
+        <PlatformSection
+          title="Google Ads"
+          description="Optimizuotos reklamos Google paieškos sistemoje ir partnerių tinkle"
+          services={googleServices}
+          platform="google"
         />
-      </CardBody>
-    </Card>
+        
+        <PlatformSection
+          title="Meta Ads"
+          description="Efektyvios reklamos Facebook ir Instagram platformose"
+          services={metaServices}
+          platform="meta"
+          delay={0.2}
+        />
+
+        <ConsultationButton />
+      </div>
+    </ErrorBoundary>
   );
-}
+};
+
+export default AdsServices;
