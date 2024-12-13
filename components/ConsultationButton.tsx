@@ -1,14 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+// components/ConsultationButton.tsx
+"use client"
+import React from "react";
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
-export const ConsultationButton: React.FC = () => {
-  const handleConsultation = () => {
-    console.log("Konsultacijos užklausa");
-  };
-
+export const ConsultationButton = () => {
   return (
-    <motion.div
+    <motion.div 
       className="fixed bottom-8 right-8 z-50"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -19,7 +17,7 @@ export const ConsultationButton: React.FC = () => {
           hover:from-teal-600 hover:via-fuchsia-600 hover:to-amber-600
           text-white font-semibold px-6 py-3
           shadow-lg hover:shadow-xl transition-all duration-300"
-        onPress={handleConsultation}
+        onPress={() => console.log("Konsultacijos užklausa")}
       >
         Nemokama konsultacija
       </Button>

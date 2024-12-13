@@ -1,5 +1,8 @@
-// data/services.ts
-import { AdService } from '@/components/constants/types';
+export interface AdService {
+  title: string;
+  description: string;
+  features: string[];
+}
 
 export const googleServices: AdService[] = [
   {
@@ -40,26 +43,6 @@ export const googleServices: AdService[] = [
       "Produktų grupių struktūros kūrimas",
       "Smart Shopping kampanijų valdymas",
       "Kryžminio pardavimo strategijos"
-    ]
-  },
-  {
-    title: "Video reklamos",
-    description: "YouTube ir video reklamos sprendimai",
-    features: [
-      "Video reklamos strategijos kūrimas",
-      "YouTube kanalų optimizavimas",
-      "TrueView reklamos kampanijos",
-      "Video remarketing nustatymai"
-    ]
-  },
-  {
-    title: "Performance Max",
-    description: "Automatizuotos visų kanalų kampanijos",
-    features: [
-      "Dirbtinio intelekto optimizavimas",
-      "Visų Google kanalų integracija",
-      "Asset groups kūrimas",
-      "Rezultatų stebėjimas realiu laiku"
     ]
   }
 ];
@@ -104,63 +87,5 @@ export const metaServices: AdService[] = [
       "Events konfigūracija",
       "CAPI integracija"
     ]
-  },
-  {
-    title: "Instagram Shopping",
-    description: "E-commerce sprendimai Instagrame",
-    features: [
-      "Produktų katalogo integracija",
-      "Shopping tags nustatymai",
-      "Instagram Shop optimizavimas",
-      "Shopping Insights analizė"
-    ]
-  },
-  {
-    title: "WhatsApp integracija",
-    description: "WhatsApp verslo sprendimai",
-    features: [
-      "WhatsApp Business API setup",
-      "Automatiniai atsakymai",
-      "Click-to-WhatsApp ads",
-      "Komunikacijos automatizavimas"
-    ]
-  },
-  {
-    title: "Messenger reklamos",
-    description: "Facebook Messenger reklamos kampanijos",
-    features: [
-      "Messenger chatbot kūrimas",
-      "Sponsored messages",
-      "Click-to-Messenger ads",
-      "Lead generation per Messenger"
-    ]
-  },
-  {
-    title: "Reels reklamos",
-    description: "Trumpo formato video reklamos",
-    features: [
-      "Reels content strategija",
-      "Vertikalaus video optimizavimas",
-      "Audio ir muzikos integracija",
-      "Interaktyvūs elementai"
-    ]
   }
 ];
-
-// Papildomi eksportai specifiniams poreikiams
-export const getAllServices = () => [...googleServices, ...metaServices];
-
-export const getServiceByTitle = (title: string): AdService | undefined => {
-  return getAllServices().find(service => service.title === title);
-};
-
-export const getServicesByPlatform = (platform: 'google' | 'meta') => {
-  return platform === 'google' ? googleServices : metaServices;
-};
-
-// Helpers pagal feature
-export const getServicesWithFeature = (feature: string): AdService[] => {
-  return getAllServices().filter(service => 
-    service.features.some(f => f.toLowerCase().includes(feature.toLowerCase()))
-  );
-};

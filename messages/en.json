@@ -10,6 +10,30 @@
     "contact": "Contact us",
     "company": "Tomorow's media house"
   },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "message": "Message",
+    "optional": "Optional",
+    "sendButton": "Send",
+    "sending": "Sending...",
+    "or": "or fill out the form",
+    "workHours": "Working hours: Mon-Fri 9:00 - 18:00",
+    "callButton": "Call",
+    "successTitle": "Success!",
+    "successMessage": "Your message has been sent successfully. We will contact you soon.",
+    "closeButton": "Close",
+    "errorMessage": "An error occurred while sending the message. Please try again.",
+    "placeholders": {
+      "name": "Enter your name",
+      "email": "your@email.com",
+      "phone": "+370...",
+      "message": "Your message..."
+    }
+  },
+  
   "SEOServices": {
     "technical": {
       "title": "Technical SEO Optimization",
@@ -46,29 +70,6 @@
     "common": {
       "auditButton": "Order Free Audit"
     }
-  },
-      "contact": {
-        "title": "Contact Us",
-        "name": "Name",
-        "email": "Email",
-        "phone": "Phone Number",
-        "message": "Message",
-        "optional": "Optional",
-        "sendButton": "Send",
-        "sending": "Sending...",
-        "or": "or fill out the form",
-        "workHours": "Working hours: Mon-Fri 9:00 - 18:00",
-        "callButton": "Call",
-        "successTitle": "Success!",
-        "successMessage": "Your message has been sent successfully. We will contact you soon.",
-        "closeButton": "Close",
-        "errorMessage": "An error occurred while sending the message. Please try again.",
-        "placeholders": {
-          "name": "Enter your name",
-          "email": "your@email.com",
-          "phone": "+370...",
-          "message": "Your message..."
-        }
-      }
-      }
-    
+  }
+   
+  }

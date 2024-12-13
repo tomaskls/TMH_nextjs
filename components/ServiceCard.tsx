@@ -1,6 +1,6 @@
+// components/ServiceCard/index.tsx
 "use client"
 import React from "react"
-import { memo } from "react"
 import { Card, CardBody, CardFooter, Button } from "@nextui-org/react"
 import { cardBaseStyles, cardHoverStyles, cardBeforeStyles, buttonStyles } from '../components/styles/seoCards'
 
@@ -10,10 +10,14 @@ interface ServiceCardProps {
    items: string[];
    buttonText: string;
  };
- onAuditRequest: () => void;
 }
 
-const ServiceCard = memo(function ServiceCard({ translations, onAuditRequest }: ServiceCardProps) {
+const ServiceCard = function ServiceCard({ translations }: ServiceCardProps) {
+ const handleAuditRequest = () => {
+   console.log("Audit requested")
+   // Čia galima pridėti realią logiką
+ }
+
  return (
    <Card className={`group ${cardBaseStyles} ${cardHoverStyles} ${cardBeforeStyles}`}>
      <CardBody className="relative z-10">
@@ -31,13 +35,13 @@ const ServiceCard = memo(function ServiceCard({ translations, onAuditRequest }: 
      <CardFooter className="relative z-10">
        <Button 
          className={buttonStyles}
-         onPress={onAuditRequest}
+         onPress={handleAuditRequest}
        >
          {translations.buttonText}
        </Button>
      </CardFooter>
    </Card>
  );
-});
+};
 
 export default ServiceCard;
