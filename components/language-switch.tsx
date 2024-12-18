@@ -1,8 +1,8 @@
-'use client'
+'use client';
 import React from 'react';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { Button } from "@nextui-org/button";
+import { Button } from '@nextui-org/button';
 
 export const LanguageSwitch = () => {
   const locale = useLocale();
@@ -17,7 +17,7 @@ export const LanguageSwitch = () => {
   };
 
   return (
-    <Button 
+    <Button
       size="sm"
       variant="flat"
       className="text-sm font-normal text-default-600 bg-default-100"

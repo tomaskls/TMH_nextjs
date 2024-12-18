@@ -1,9 +1,9 @@
-import React from "react";
-import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
-import { Providers } from "./providers";
-import { siteConfig } from "@/config/site";
-import { Navbar } from "@/components/navbar";
+import React from 'react';
+import { Metadata, Viewport } from 'next';
+import { Link } from '@nextui-org/link';
+import { Providers } from './providers';
+import { siteConfig } from '@/config/site';
+import { Navbar } from '@/components/navbar';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 };
 
@@ -29,29 +29,28 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'lt' }];
 }
 
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  const resolvedParams = await params;
+  const locale = resolvedParams.locale;
 
-  export default async function LocaleLayout({ 
-    children,
-    params
-  }: {
-    children: React.ReactNode;
-    params: { locale: string };
-  }) {
-    const resolvedParams = await params;
-    const locale = resolvedParams.locale;
-    
-    let messages;
-    try {
-      messages = (await import(`../../messages/${locale}.json`)).default;
-    } catch  {
-      notFound();
-    }
-    // ... likęs kodas
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch {
+    notFound();
+  }
+  // ... likęs kodas
   // ... likęs kodas
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
-      <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+      <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
         <div className="relative flex flex-col h-screen">
           <Navbar />
           <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">

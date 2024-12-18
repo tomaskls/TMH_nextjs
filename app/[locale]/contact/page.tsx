@@ -1,11 +1,10 @@
-// app/[locale]/components/ContactForm.tsx
 'use client';
 import React from 'react';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { 
-  Card, 
-  CardBody, 
+import {
+  Card,
+  CardBody,
   CardHeader,
   Input,
   Textarea,
@@ -18,23 +17,23 @@ import {
   ModalFooter,
   Link,
   Divider,
-} from "@nextui-org/react";
+} from '@nextui-org/react';
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isError, setIsError] = useState(false);
-  
+
   const t = useTranslations('contact');
-  
+
   // Pakeiskite į savo kontaktinę informaciją
   const contactInfo = {
-    email: "your.email@example.com",
-    phone: "+37060000000",
-    facebook: "https://facebook.com/your.page",
-    instagram: "https://instagram.com/your.profile",
+    email: 'your.email@example.com',
+    phone: '+37060000000',
+    facebook: 'https://facebook.com/your.page',
+    instagram: 'https://instagram.com/your.profile',
   };
-  
+
   const formAction = `https://formsubmit.co/${contactInfo.email}`;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -76,10 +75,10 @@ export default function ContactForm() {
           <div className="flex flex-col space-y-2 text-sm">
             <p className="flex items-center gap-2">
               <span className="font-medium">{t('phone')}:</span>
-              <Link 
-                as="a" 
-                href={`tel:${contactInfo.phone}`} 
-                showAnchorIcon 
+              <Link
+                as="a"
+                href={`tel:${contactInfo.phone}`}
+                showAnchorIcon
                 color="primary"
               >
                 {contactInfo.phone}
@@ -87,10 +86,10 @@ export default function ContactForm() {
             </p>
             <p className="flex items-center gap-2">
               <span className="font-medium">{t('email')}:</span>
-              <Link 
-                as="a" 
-                href={`mailto:${contactInfo.email}`} 
-                showAnchorIcon 
+              <Link
+                as="a"
+                href={`mailto:${contactInfo.email}`}
+                showAnchorIcon
                 color="primary"
               >
                 {contactInfo.email}
@@ -99,7 +98,7 @@ export default function ContactForm() {
           </div>
         </CardHeader>
 
-        <Divider/>
+        <Divider />
 
         <CardBody>
           <div className="grid grid-cols-2 gap-2 mb-6">
@@ -113,7 +112,11 @@ export default function ContactForm() {
               {t('callButton')}
             </Button>
             <Button
-              onPress={() => handleExternalLink(`https://wa.me/${contactInfo.phone.replace(/\+/g, '')}`)}
+              onPress={() =>
+                handleExternalLink(
+                  `https://wa.me/${contactInfo.phone.replace(/\+/g, '')}`
+                )
+              }
               color="success"
               variant="flat"
               className="flex-1"
@@ -138,8 +141,8 @@ export default function ContactForm() {
             </Button>
           </div>
 
-          <Divider className="my-4"/>
-          
+          <Divider className="my-4" />
+
           <div className="text-center text-sm text-gray-500 mb-4">
             {t('or')}
           </div>
@@ -147,7 +150,7 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input type="text" name="_honey" style={{ display: 'none' }} />
             <input type="hidden" name="_captcha" value="false" />
-            
+
             <Input
               label={t('name')}
               name="name"
@@ -183,13 +186,9 @@ export default function ContactForm() {
               minRows={4}
             />
 
-            {isError && (
-              <div className="text-danger">
-                {t('errorMessage')}
-              </div>
-            )}
+            {isError && <div className="text-danger">{t('errorMessage')}</div>}
 
-            <Button 
+            <Button
               type="submit"
               color="primary"
               isLoading={isSubmitting}
@@ -210,9 +209,7 @@ export default function ContactForm() {
           {(onClose) => (
             <>
               <ModalHeader>{t('successTitle')}</ModalHeader>
-              <ModalBody>
-                {t('successMessage')}
-              </ModalBody>
+              <ModalBody>{t('successMessage')}</ModalBody>
               <ModalFooter>
                 <Button color="primary" onPress={onClose}>
                   {t('closeButton')}

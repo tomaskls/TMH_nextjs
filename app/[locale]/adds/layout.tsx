@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function AboutLayout({
   children,
@@ -6,10 +6,8 @@ export default function AboutLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section >
-      <div >
-        {children}
-      </div>
+    <section>
+      <div>{children}</div>
     </section>
   );
 }

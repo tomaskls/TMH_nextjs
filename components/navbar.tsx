@@ -1,33 +1,33 @@
-'use client'
+'use client';
 
 import { useTranslations } from 'next-intl';
-import React from "react";
-import { 
-  Navbar as NextUINavbar, 
-  NavbarContent, 
-  NavbarMenu, 
-  NavbarMenuToggle, 
+import React from 'react';
+import {
+  Navbar as NextUINavbar,
+  NavbarContent,
+  NavbarMenu,
+  NavbarMenuToggle,
   NavbarBrand,
-  NavbarItem, 
-  NavbarMenuItem
-} from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
-import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
-import { LanguageSwitch } from "@/components/language-switch";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo } from "@/components/icons";
-import { siteConfig } from "@/config/site";
+  NavbarItem,
+  NavbarMenuItem,
+} from '@nextui-org/navbar';
+import { Button } from '@nextui-org/button';
+import { Link } from '@nextui-org/link';
+import { link as linkStyles } from '@nextui-org/theme';
+import NextLink from 'next/link';
+import clsx from 'clsx';
+import { LanguageSwitch } from '@/components/language-switch';
+import { ThemeSwitch } from '@/components/theme-switch';
+import { Logo } from '@/components/icons';
+import { siteConfig } from '@/config/site';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const t = useTranslations('navigation');
 
   return (
-    <NextUINavbar 
-      maxWidth="xl" 
+    <NextUINavbar
+      maxWidth="xl"
       position="sticky"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -44,8 +44,8 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  linkStyles({ color: 'foreground' }),
+                  'data-[active=true]:text-primary data-[active=true]:font-medium'
                 )}
                 color="foreground"
                 href={item.href}
@@ -89,8 +89,8 @@ export const Navbar = () => {
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <NextLink
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  linkStyles({ color: 'foreground' }),
+                  'data-[active=true]:text-primary data-[active=true]:font-medium'
                 )}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
@@ -102,8 +102,8 @@ export const Navbar = () => {
           <NavbarMenuItem>
             <NextLink
               className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary data-[active=true]:font-medium"
+                linkStyles({ color: 'foreground' }),
+                'data-[active=true]:text-primary data-[active=true]:font-medium'
               )}
               href={siteConfig.links.contact}
               onClick={() => setIsMenuOpen(false)}

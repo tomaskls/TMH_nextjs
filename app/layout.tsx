@@ -1,7 +1,7 @@
-import React from "react";
-import "@/styles/globals.css";
-import { fontSans } from "@/config/fonts";
-import clsx from "clsx";
+import React from 'react';
+import '@/styles/globals.css';
+import { fontSans } from '@/config/fonts';
+import clsx from 'clsx';
 
 export default function RootLayout({
   children,
@@ -13,8 +13,8 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          'min-h-screen bg-background font-sans antialiased',
+          fontSans.variable
         )}
       >
         {children}

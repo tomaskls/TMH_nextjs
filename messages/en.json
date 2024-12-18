@@ -33,7 +33,7 @@
       "message": "Your message..."
     }
   },
-  
+
   "SEOServices": {
     "technical": {
       "title": "Technical SEO Optimization",
@@ -71,5 +71,4 @@
       "auditButton": "Order Free Audit"
     }
   }
-   
-  }
+}
