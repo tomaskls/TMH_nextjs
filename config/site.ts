@@ -8,7 +8,7 @@ export const siteConfig = {
     { label: 'websites', href: '/websites' },
     { label: 'seo', href: '/seo' },
     { label: 'adds', href: '/adds' },
-    { label: 'e-stores', href: '/e-stores' },
+    { label: 'e-stores', href: '/estores' },
     { label: 'blog', href: '/blog' },
   ],
 
@@ -17,7 +17,7 @@ export const siteConfig = {
     { label: 'websites', href: '/websites' },
     { label: 'seo', href: '/seo' },
     { label: 'adds', href: '/adds' },
-    { label: 'e-stores', href: '/e-stores' },
+    { label: 'e-stores', href: '/estores' },
     { label: 'blog', href: '/blog' },
   ],
   links: {

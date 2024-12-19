@@ -70,5 +70,51 @@
     "common": {
       "auditButton": "Order Free Audit"
     }
+  },
+  "hero": {
+    "badge": "Shopify Experts",
+    "title": "Your successful e-store starts here",
+    "description": "We create sales-generating Shopify stores that help your business grow and compete in the global market",
+    "buttons": {
+      "proposal": "Get Proposal",
+      "portfolio": "View Work"
+    }
+  },
+  "services": {
+    "title": "Comprehensive solutions for your e-business",
+    "items": {
+      "development": {
+        "title": "Shopify Store Development",
+        "features": [
+          "Complete store setup",
+          "Product catalog optimization",
+          "Payment systems integration",
+          "Mobile device support"
+        ]
+      },
+      "design": {
+        "title": "Design Solutions",
+        "features": [
+          "Unique brand identity",
+          "UX/UI design",
+          "Responsive design",
+          "User behavior analysis"
+        ]
+      },
+      "maintenance": {
+        "title": "Technical Maintenance",
+        "features": [
+          "Regular updates",
+          "Speed optimization",
+          "Security assurance",
+          "24/7 support"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Start your e-commerce journey today",
+    "description": "Contact us and get a free consultation",
+    "button": "Contact Now"
   }
 }

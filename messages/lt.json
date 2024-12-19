@@ -70,5 +70,52 @@
     "common": {
       "auditButton": "Užsakyti nemokamą auditą"
     }
+  },
+
+  "hero": {
+    "badge": "Shopify Ekspertai",
+    "title": "Jūsų sėkminga e-parduotuvė prasideda čia",
+    "description": "Kuriame pardavimus generuojančias Shopify parduotuves, kurios padeda jūsų verslui augti ir konkuruoti globalioje rinkoje",
+    "buttons": {
+      "proposal": "Gauti pasiūlymą",
+      "portfolio": "Peržiūrėti darbus"
+    }
+  },
+  "services": {
+    "title": "Visapusiški sprendimai jūsų e-verslui",
+    "items": {
+      "development": {
+        "title": "Shopify parduotuvių kūrimas",
+        "features": [
+          "Pilnas parduotuvės sukūrimas",
+          "Prekių katalogo optimizavimas",
+          "Mokėjimo sistemų integracija",
+          "Mobilių įrenginių palaikymas"
+        ]
+      },
+      "design": {
+        "title": "Dizaino sprendimai",
+        "features": [
+          "Unikalus prekės ženklo identitetas",
+          "UX/UI dizainas",
+          "Responsive dizainas",
+          "Vartotojų elgsenos analizė"
+        ]
+      },
+      "maintenance": {
+        "title": "Techninė priežiūra",
+        "features": [
+          "Nuolatiniai atnaujinimai",
+          "Greičio optimizavimas",
+          "Saugumo užtikrinimas",
+          "24/7 palaikymas"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Pradėkite savo e-komercijos kelionę šiandien",
+    "description": "Susisiekite ir gaukite nemokamą konsultaciją",
+    "button": "Susisiekti dabar"
   }
 }
