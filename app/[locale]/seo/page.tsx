@@ -1,8 +1,8 @@
 // components/SEOServicesCards/index.tsx
-import React from 'react';
+import { useTranslations } from 'next-intl';
+
 import { seoServices } from '@/components/constants/seoServices';
 import ServiceCard from '@/components/ServiceCard';
-import { useTranslations } from 'next-intl';
 
 interface Translations {
   title: string;
@@ -20,7 +20,7 @@ const SEOServicesCards = () => {
   }));
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
       {translations.map((serviceTranslations, index) => (
         <ServiceCard
           key={`seo-service-${index}`}

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Metadata, Viewport } from 'next';
 import { Link } from '@nextui-org/link';
-import { Providers } from './providers';
-import { siteConfig } from '@/config/site';
-import { Navbar } from '@/components/navbar';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+
+import { Providers } from './providers';
+
+import { siteConfig } from '@/config/site';
+import { Navbar } from '@/components/navbar';
 
 export const metadata: Metadata = {
   title: {
@@ -40,6 +42,7 @@ export default async function LocaleLayout({
   const locale = resolvedParams.locale;
 
   let messages;
+
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch {
@@ -49,11 +52,11 @@ export default async function LocaleLayout({
   // ... likęs kodas
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
         <div className="relative flex flex-col h-screen">
           <Navbar />
-          <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+          <main className="container mx-auto max-w-7xl pt-16 px-4 flex-grow">
             {children}
           </main>
           <footer className="w-full flex items-center justify-center py-3">

@@ -54,6 +54,7 @@ export default function ContactForm() {
       } else {
         throw new Error();
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setIsError(true);
     } finally {
@@ -66,7 +67,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4">
+    <div className="max-w-md mx-auto p-2">
       <Card>
         <CardHeader className="flex flex-col gap-3">
           <div className="flex justify-between items-center w-full">
@@ -76,10 +77,10 @@ export default function ContactForm() {
             <p className="flex items-center gap-2">
               <span className="font-medium">{t('phone')}:</span>
               <Link
-                as="a"
-                href={`tel:${contactInfo.phone}`}
                 showAnchorIcon
+                as="a"
                 color="primary"
+                href={`tel:${contactInfo.phone}`}
               >
                 {contactInfo.phone}
               </Link>
@@ -87,10 +88,10 @@ export default function ContactForm() {
             <p className="flex items-center gap-2">
               <span className="font-medium">{t('email')}:</span>
               <Link
-                as="a"
-                href={`mailto:${contactInfo.email}`}
                 showAnchorIcon
+                as="a"
                 color="primary"
+                href={`mailto:${contactInfo.email}`}
               >
                 {contactInfo.email}
               </Link>
@@ -104,38 +105,38 @@ export default function ContactForm() {
           <div className="grid grid-cols-2 gap-2 mb-6">
             <Button
               as="a"
-              href={`tel:${contactInfo.phone}`}
-              color="primary"
-              variant="flat"
               className="flex-1"
+              color="primary"
+              href={`tel:${contactInfo.phone}`}
+              variant="flat"
             >
               {t('callButton')}
             </Button>
             <Button
+              className="flex-1"
+              color="success"
+              variant="flat"
               onPress={() =>
                 handleExternalLink(
                   `https://wa.me/${contactInfo.phone.replace(/\+/g, '')}`
                 )
               }
-              color="success"
-              variant="flat"
-              className="flex-1"
             >
               WhatsApp
             </Button>
             <Button
-              onPress={() => handleExternalLink(contactInfo.facebook)}
+              className="flex-1"
               color="primary"
               variant="flat"
-              className="flex-1"
+              onPress={() => handleExternalLink(contactInfo.facebook)}
             >
               Facebook
             </Button>
             <Button
-              onPress={() => handleExternalLink(contactInfo.instagram)}
+              className="flex-1"
               color="secondary"
               variant="flat"
-              className="flex-1"
+              onPress={() => handleExternalLink(contactInfo.instagram)}
             >
               Instagram
             </Button>
@@ -147,52 +148,52 @@ export default function ContactForm() {
             {t('or')}
           </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <input type="text" name="_honey" style={{ display: 'none' }} />
-            <input type="hidden" name="_captcha" value="false" />
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+            <input name="_honey" style={{ display: 'none' }} type="text" />
+            <input name="_captcha" type="hidden" value="false" />
 
             <Input
+              isRequired
               label={t('name')}
               name="name"
-              variant="bordered"
-              isRequired
               placeholder={t('placeholders.name')}
+              variant="bordered"
             />
 
             <Input
+              isRequired
               label={t('email')}
               name="email"
+              placeholder={t('placeholders.email')}
               type="email"
               variant="bordered"
-              isRequired
-              placeholder={t('placeholders.email')}
             />
 
             <Input
+              description={t('optional')}
               label={t('phone')}
               name="phone"
+              placeholder={t('placeholders.phone')}
               type="tel"
               variant="bordered"
-              placeholder={t('placeholders.phone')}
-              description={t('optional')}
             />
 
             <Textarea
-              label={t('message')}
-              name="message"
-              variant="bordered"
               isRequired
-              placeholder={t('placeholders.message')}
+              label={t('message')}
               minRows={4}
+              name="message"
+              placeholder={t('placeholders.message')}
+              variant="bordered"
             />
 
             {isError && <div className="text-danger">{t('errorMessage')}</div>}
 
             <Button
-              type="submit"
+              className="w-full"
               color="primary"
               isLoading={isSubmitting}
-              className="w-full"
+              type="submit"
             >
               {isSubmitting ? t('sending') : t('sendButton')}
             </Button>
