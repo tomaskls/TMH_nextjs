@@ -22,8 +22,8 @@ export const ServiceCard = ({ service, platform }: ServiceCardProps) => {
         border rounded-lg p-6
         ${
           platform === 'google'
-            ? 'bg-gradient-to-r from-teal-50/90 via-fuchsia-50/90 to-amber-50/90 hover:from-teal-100/90 hover:via-fuchsia-100/90 hover:to-amber-100/90 dark:from-red-900  dark:hover:from-red-950 dark:hover:to-amber-800/90 border-teal-200 dark:border-slate-700'
-            : 'bg-gradient-to-r from-amber-50/90 via-fuchsia-50/90 to-teal-50/90 hover:from-amber-100/90 hover:via-fuchsia-100/90 hover:to-teal-100/90 dark:from-amber-900/80 dark:via-fuchsia-900/80 dark:to-teal-900/70 dark:hover:from-amber-800 dark:hover:to-teal-900 border-fuchsia-200 dark:border-slate-700'
+            ? 'bg-gradient-to-r from-teal-50/90 via-fuchsia-50/90 to-amber-50/90 hover:from-teal-100/90 hover:via-fuchsia-100/90 hover:to-amber-100/90 dark:from-red-900 dark:to-red-900 dark:hover:from-red-950 dark:hover:to-amber-800/90 border-teal-200 dark:border-slate-700'
+            : 'bg-gradient-to-r from-amber-50/90 via-fuchsia-50/90 to-teal-50/90 hover:from-amber-100/90 hover:via-fuchsia-100/90 hover:to-teal-100/90 dark:from-red-900 dark:to-red-900 dark:hover:from-red-950 dark:hover:to-amber-800/90 border-fuchsia-200 dark:border-slate-700'
         }
         transform hover:scale-[1.02]
         hover:shadow-xl hover:shadow-white/10
