@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 import type { AdService } from '@/components/constants/addSevises';
+
+import React from 'react';
+import { motion } from 'framer-motion';
 
 interface ServiceCardProps {
   service: AdService;
@@ -10,22 +10,19 @@ interface ServiceCardProps {
   platform: 'google' | 'meta';
 }
 
-export const ServiceCard = ({ service, index, platform }: ServiceCardProps) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
+export const ServiceCard = ({ service, platform }: ServiceCardProps) => {
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
       className={`
+    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 20 }}
+    ref={ref}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
         backdrop-blur-sm hover:shadow-lg transition-all duration-300
         border rounded-lg p-6
         ${
           platform === 'google'
-            ? 'bg-gradient-to-r from-teal-50/90 via-fuchsia-50/90 to-amber-50/90 hover:from-teal-100/90 hover:via-fuchsia-100/90 hover:to-amber-100/90 dark:from-red-900/90 dark:via-fuchsia-900/70 dark:to-amber-900/60 dark:hover:from-red-950 dark:hover:to-amber-800/90 border-teal-200 dark:border-slate-700'
+            ? 'bg-gradient-to-r from-teal-50/90 via-fuchsia-50/90 to-amber-50/90 hover:from-teal-100/90 hover:via-fuchsia-100/90 hover:to-amber-100/90 dark:from-red-900  dark:hover:from-red-950 dark:hover:to-amber-800/90 border-teal-200 dark:border-slate-700'
             : 'bg-gradient-to-r from-amber-50/90 via-fuchsia-50/90 to-teal-50/90 hover:from-amber-100/90 hover:via-fuchsia-100/90 hover:to-teal-100/90 dark:from-amber-900/80 dark:via-fuchsia-900/80 dark:to-teal-900/70 dark:hover:from-amber-800 dark:hover:to-teal-900 border-fuchsia-200 dark:border-slate-700'
         }
         transform hover:scale-[1.02]
@@ -56,7 +53,7 @@ export const ServiceCard = ({ service, index, platform }: ServiceCardProps) => {
                   ? 'bg-gradient-to-r from-teal-500 via-fuchsia-500 to-amber-500'
                   : 'bg-gradient-to-r from-amber-500 via-fuchsia-500 to-teal-500'
               }`}
-            ></span>
+            />
             {feature}
           </li>
         ))}
