@@ -6,7 +6,6 @@ import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import importPlugin from 'eslint-plugin-import';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
-import prettierPlugin from 'eslint-plugin-prettier';
 import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 
 export default [
@@ -19,7 +18,6 @@ export default [
       'react-hooks': reactHooksPlugin,
       import: importPlugin,
       'jsx-a11y': jsxA11yPlugin,
-      prettier: prettierPlugin,
       'unused-imports': unusedImportsPlugin,
     },
     languageOptions: {
@@ -110,7 +108,6 @@ export default [
 
       // General
       'no-console': 'warn',
-      'prettier/prettier': 'warn',
 
       // Spacing
       'padding-line-between-statements': [

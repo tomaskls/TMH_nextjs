@@ -117,5 +117,82 @@
     "title": "Pradėkite savo e-komercijos kelionę šiandien",
     "description": "Susisiekite ir gaukite nemokamą konsultaciją",
     "button": "Susisiekti dabar"
+  },
+
+  "SEOPage": {
+    "hero": {
+      "title": "SEO sprendimai, kurie augina jūsų verslą",
+      "description": "Padidinkite savo svetainės matomumą ir pritraukite daugiau klientų su mūsų SEO paslaugomis",
+      "auditButton": "Užsakyti nemokamą auditą"
+    },
+    "services": {
+      "title": "Mūsų SEO paslaugos",
+      "auditButton": "Užsakyti auditą",
+      "items": [
+        {
+          "title": "Techninė SEO optimizacija",
+          "icon": "settings",
+          "description": "Techniniai svetainės patobulinimai geresniems rezultatams",
+          "items": [
+            { "title": "Svetainės greičio optimizavimas", "icon": "globe" },
+            { "title": "Mobiliosios versijos optimizavimas", "icon": "smartphone" },
+            { "title": "Svetainės struktūros gerinimas", "icon": "fileCode" },
+            { "title": "XML sitemap sukūrimas", "icon": "fileText" },
+            { "title": "Robots.txt konfigūravimas", "icon": "bot" }
+          ]
+        },
+        {
+          "title": "Turinio optimizacija",
+          "icon": "pen",
+          "description": "Efektyvus turinio optimizavimas ir kūrimas",
+          "items": [
+            { "title": "Raktažodžių tyrimas ir analizė", "icon": "key" },
+            { "title": "Turinio kūrimas ir optimizavimas", "icon": "fileText" },
+            { "title": "Meta aprašymų rašymas", "icon": "pen" },
+            { "title": "URL struktūros optimizavimas", "icon": "link" },
+            { "title": "Paveikslėlių optimizavimas", "icon": "image" }
+          ]
+        },
+        {
+          "title": "Off-page SEO",
+          "icon": "share",
+          "description": "Išorinių faktorių optimizavimas",
+          "items": [
+            { "title": "Nuorodų strategijos kūrimas", "icon": "link" },
+            { "title": "Kokybišku backlinks gavimas", "icon": "share" },
+            { "title": "Socialinių tinklų optimizacija", "icon": "globe" },
+            { "title": "Google My Business tvarkymas", "icon": "mapPin" },
+            { "title": "Lokalios SEO strategijos", "icon": "mapPin" }
+          ]
+        },
+        {
+          "title": "Analitika ir stebėjimas",
+          "icon": "barChart",
+          "description": "Nuolatinis rezultatų sekimas ir analizė",
+          "items": [
+            { "title": "Google Analytics įdiegimas", "icon": "lineChart" },
+            { "title": "Google Search Console naudojimas", "icon": "search" },
+            { "title": "Pozicijų stebėjimas", "icon": "trendingUp" },
+            { "title": "Konkurentų analizė", "icon": "barChart" },
+            { "title": "Reguliarios ataskaitos", "icon": "fileText" }
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "Kodėl verta investuoti į SEO?",
+      "stats": [
+        { "value": "+82%", "label": "Organinė paieška" },
+        { "value": "+65%", "label": "Konversijos" },
+        { "value": "+93%", "label": "Pozicijos Google" }
+      ],
+      "learnMore": "Sužinoti daugiau"
+    },
+    "achievements": {
+      "title": "SEO rezultatai, kuriais didžiuojamės",
+      "highlight": "Vidutiniškai +150% organinės paieškos srautas per 6 mėnesius",
+      "storiesButton": "Peržiūrėti sėkmės istorijas"
+    }
   }
+
 }

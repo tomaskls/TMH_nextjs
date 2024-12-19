@@ -116,5 +116,82 @@
     "title": "Start your e-commerce journey today",
     "description": "Contact us and get a free consultation",
     "button": "Contact Now"
+  },
+
+  "SEOPage": {
+    "hero": {
+      "title": "SEO Solutions That Grow Your Business",
+      "description": "Increase your website visibility and attract more customers with our SEO services",
+      "auditButton": "Get Free Audit"
+    },
+    "services": {
+      "title": "Our SEO Services",
+      "auditButton": "Order Audit",
+      "items": [
+        {
+          "title": "Technical SEO Optimization",
+          "icon": "settings",
+          "description": "Technical website improvements for better results",
+          "items": [
+            { "title": "Website Speed Optimization", "icon": "globe" },
+            { "title": "Mobile Version Optimization", "icon": "smartphone" },
+            { "title": "Website Structure Enhancement", "icon": "fileCode" },
+            { "title": "XML Sitemap Creation", "icon": "fileText" },
+            { "title": "Robots.txt Configuration", "icon": "bot" }
+          ]
+        },
+        {
+          "title": "Content Optimization",
+          "icon": "pen",
+          "description": "Efficient content optimization and creation",
+          "items": [
+            { "title": "Keyword Research and Analysis", "icon": "key" },
+            { "title": "Content Creation and Optimization", "icon": "fileText" },
+            { "title": "Meta Description Writing", "icon": "pen" },
+            { "title": "URL Structure Optimization", "icon": "link" },
+            { "title": "Image Optimization", "icon": "image" }
+          ]
+        },
+        {
+          "title": "Off-page SEO",
+          "icon": "share",
+          "description": "External factors optimization",
+          "items": [
+            { "title": "Link Building Strategy", "icon": "link" },
+            { "title": "Quality Backlinks Acquisition", "icon": "share" },
+            { "title": "Social Media Optimization", "icon": "globe" },
+            { "title": "Google My Business Management", "icon": "mapPin" },
+            { "title": "Local SEO Strategies", "icon": "mapPin" }
+          ]
+        },
+        {
+          "title": "Analytics and Monitoring",
+          "icon": "barChart",
+          "description": "Continuous results tracking and analysis",
+          "items": [
+            { "title": "Google Analytics Implementation", "icon": "lineChart" },
+            { "title": "Google Search Console Usage", "icon": "search" },
+            { "title": "Position Tracking", "icon": "trendingUp" },
+            { "title": "Competitor Analysis", "icon": "barChart" },
+            { "title": "Regular Reports", "icon": "fileText" }
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "Why Invest in SEO?",
+      "stats": [
+        { "value": "+82%", "label": "Organic Search" },
+        { "value": "+65%", "label": "Conversions" },
+        { "value": "+93%", "label": "Google Rankings" }
+      ],
+      "learnMore": "Learn More"
+    },
+    "achievements": {
+      "title": "SEO Results We're Proud Of",
+      "highlight": "Average +150% organic search traffic in 6 months",
+      "storiesButton": "View Success Stories"
+    }
   }
 }
+

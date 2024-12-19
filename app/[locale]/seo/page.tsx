@@ -1,34 +1,22 @@
-// components/SEOServicesCards/index.tsx
-import { useTranslations } from 'next-intl';
+import { type Metadata } from 'next';
 
-import { seoServices } from '@/components/constants/seoServices';
-import ServiceCard from '@/components/ServiceCard';
+import { HeroSection } from '@/components/seo/HeroSection';
+import { ServicesSection } from '@/components/seo/ServicesSection';
+import { ResultsSection } from '@/components/seo/ResultsSection';
+import { AchievementsSection } from '@/components/seo/AchievementsSection';
 
-interface Translations {
-  title: string;
-  items: string[];
-  buttonText: string;
-}
-
-const SEOServicesCards = () => {
-  const t = useTranslations('SEOServices');
-
-  const translations: Translations[] = seoServices.map((service) => ({
-    title: t(service.titleKey),
-    items: service.servicesKeys.map((key) => t(key)),
-    buttonText: t('common.auditButton'),
-  }));
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-      {translations.map((serviceTranslations, index) => (
-        <ServiceCard
-          key={`seo-service-${index}`}
-          translations={serviceTranslations}
-        />
-      ))}
-    </div>
-  );
+export const metadata: Metadata = {
+  title: 'SEO paslaugos | Tomorrow\'s media house',
+  description: 'Profesionalios SEO paslaugos, kurios padeda pasiekti aukščiausias pozicijas Google',
 };
 
-export default SEOServicesCards;
+export default function SEOPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-white dark:from-slate-900 dark:to-slate-800">
+      <HeroSection />
+      <ServicesSection />
+      <ResultsSection />
+      <AchievementsSection />
+    </div>
+  );
+}
