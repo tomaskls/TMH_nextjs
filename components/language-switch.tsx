@@ -11,19 +11,21 @@ export const LanguageSwitch = () => {
 
   const toggleLocale = () => {
     const newLocale = locale === 'en' ? 'lt' : 'en';
-    // Pašaliname esamą lokalę iš kelio
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+
     router.push(newPath);
   };
 
   return (
-    <Button
-      size="sm"
-      variant="flat"
-      className="text-sm font-normal text-default-600 bg-default-100"
-      onClick={toggleLocale}
-    >
-      {locale.toUpperCase()}
-    </Button>
+    <div className="p-2"> {/* Pridedame wrapper'į su padding */}
+      <Button
+        className="text-sm font-normal text-default-600 bg-default-100 min-h-[48px] min-w-[48px] touch-manipulation cursor-pointer active:opacity-50"
+        size="sm"
+        variant="flat"
+        onClick={toggleLocale}
+      >
+        {locale.toUpperCase()}
+      </Button>
+    </div>
   );
 };
