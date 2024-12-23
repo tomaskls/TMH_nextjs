@@ -1,7 +1,8 @@
 import React from 'react';
 import '@/styles/globals.css';
-import { fontSans } from '@/config/fonts';
 import clsx from 'clsx';
+
+import { fontSans } from '@/config/fonts';
 
 export default function RootLayout({
   children,
