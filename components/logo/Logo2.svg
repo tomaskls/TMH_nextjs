@@ -1,0 +1,53 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 150 L100 30 L200 30 L280 150 L200 270 L100 270 Z" 
+          fill="#1e293b" />
+    
+    <path d="M40 150 Q150 50, 260 150 Q150 250, 40 150" 
+          fill="none" 
+          stroke="#38bdf8" 
+          stroke-width="2"
+          stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset"
+               values="0;8"
+               dur="1s"
+               repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M90 80 L210 80 M150 80 L150 220" 
+          stroke="#38bdf8" 
+          stroke-width="8" 
+          stroke-linecap="round">
+      <animate attributeName="stroke-width"
+               values="8;10;8"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M100 220 L100 120 L150 180 L200 120 L200 220" 
+          fill="none"
+          stroke="#38bdf8" 
+          stroke-width="8" 
+          stroke-linecap="round">
+      <animate attributeName="stroke"
+               values="#38bdf8;#7dd3fc;#38bdf8"
+               dur="3s"
+               repeatCount="indefinite"/>
+    </path>
+    
+    <circle cx="150" cy="80" r="5" fill="#7dd3fc">
+        <animate attributeName="opacity"
+                values="1;0.5;1"
+                dur="2s"
+                repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="120" r="5" fill="#7dd3fc"/>
+    <circle cx="200" cy="120" r="5" fill="#7dd3fc"/>
+    <circle cx="150" cy="180" r="5" fill="#7dd3fc"/>
+    
+    <!-- Subtilus outer glow efektas -->
+    <circle cx="150" cy="150" r="120" 
+            fill="none" 
+            stroke="#38bdf8" 
+            stroke-width="0.5"
+            stroke-opacity="0.3"/>
+</svg>

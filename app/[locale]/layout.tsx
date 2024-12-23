@@ -6,15 +6,11 @@ import { notFound } from 'next/navigation';
 
 import { Providers } from './providers';
 
-import { siteConfig } from '@/config/site';
 import { Navbar } from '@/components/navbar';
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+  title: "Tomorrow's Media House", 
+  description: "rofesionalus tinklapių kūrimas ir SEO paslaugos, padedančios jūsų verslui augti internete. Dirbame su moderniausiomis technologijomis, užtikriname greitą svetainių veikimą ir optimizuojame jūsų matomumą Google paieškos sistemoje.",
   icons: {
     icon: '/favicon.ico',
   },
@@ -48,8 +44,6 @@ export default async function LocaleLayout({
   } catch {
     notFound();
   }
-  // ... likęs kodas
-  // ... likęs kodas
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>

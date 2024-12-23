@@ -16,9 +16,12 @@ import { Link } from '@nextui-org/link';
 import { link as linkStyles } from '@nextui-org/theme';
 import NextLink from 'next/link';
 import clsx from 'clsx';
+
+import Logo2 from './logo/Logo2';
+
 import { LanguageSwitch } from '@/components/language-switch';
 import { ThemeSwitch } from '@/components/theme-switch';
-import { Logo } from '@/components/icons';
+import { Logo } from '@/components/logo/Logo';
 import { siteConfig } from '@/config/site';
 
 export const Navbar = () => {
@@ -27,15 +30,16 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
+      isMenuOpen={isMenuOpen}
       maxWidth="xl"
       position="sticky"
-      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
+            <Logo2 />
             <p className="font-bold text-inherit">TMH</p>
           </NextLink>
         </NavbarBrand>
