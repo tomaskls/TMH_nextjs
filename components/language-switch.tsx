@@ -20,7 +20,7 @@ export const LanguageSwitch = () => {
   return (
     <Button
       className=""
-      color='primary'
+      color='secondary'
       size="sm"
       variant="solid"
       onPress={toggleLocale}

@@ -19,7 +19,7 @@ import clsx from 'clsx';
 
 import { LanguageSwitch } from '@/components/language-switch';
 import { ThemeSwitch } from '@/components/theme-switch';
-import { Logo } from '@/components/icons';
+import {Logo} from '@/components/logo/Logo'
 import { siteConfig } from '@/config/site';
 
 export const Navbar = () => {
@@ -33,20 +33,20 @@ export const Navbar = () => {
       position="sticky"
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+      <NavbarContent className="basis-1/5 sm:basis-full justify-start items-center gap-10" >
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">TMH</p>
+            <Logo style={{width: '100px', height: '100px'}} className=' mt-4' />
+            <p className="hidden md:inline font-bold text-inherit text-lg ml-6"><span className='text-fuchsia-500'>Tomo</span>rrow's Media House</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-4 justify-start ml-6">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-primary data-[active=true]:font-medium'
+                  'data-[active=true]:text-primary data-[active=true]:font-medium '
                 )}
                 color="foreground"
                 href={item.href}

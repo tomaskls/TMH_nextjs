@@ -31,7 +31,7 @@ const WebDevelopmentPage = () => {
         
         <div className="relative h-full flex flex-col justify-center px-4 md:px-12 lg:px-24">
           <div className="border-l-4 border-fuchsia-600 pl-6 mb-12">
-            <h1 className="text-7xl md:text-8xl font-bold mb-4">
+            <h1 className="text-5xl md:text-8xl font-bold mb-4">
               Svetainių
               <br />
               Kūrimas
