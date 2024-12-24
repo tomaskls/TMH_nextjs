@@ -9,7 +9,7 @@ export function ServicesSection() {
   const services = t.raw('items') as SEOServiceItem[];
   
   return (
-    <section className="py-16 px-4 bg-white dark:bg-slate-900">
+    <section className="py-16 px-4 dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">
           {t('title')}

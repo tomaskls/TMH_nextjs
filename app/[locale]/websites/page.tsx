@@ -24,14 +24,14 @@ const WebDevelopmentPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-black text-zinc-900 dark:text-white overflow-hidden">
       {/* Hero sekcija */}
       <div className="relative h-screen">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#3B0764,#000000)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#FAE8FF,#FFFFFF)] dark:bg-[radial-gradient(circle_at_50%_120%,#3B0764,#000000)]" />
         
         <div className="relative h-full flex flex-col justify-center px-4 md:px-12 lg:px-24">
           <div className="border-l-4 border-fuchsia-600 pl-6 mb-12">
-            <h1 className="text-5xl md:text-8xl font-bold mb-4">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">
               Svetainių
               <br />
               Kūrimas
@@ -41,7 +41,7 @@ const WebDevelopmentPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
             <div>
-              <p className="text-xl text-gray-400 mb-8">
+              <p className="text-xl text-zinc-600 dark:text-gray-400 mb-8">
                 Kuriame išskirtinius ir inovatyvius skaitmeninius sprendimus, 
                 kurie ne tik atrodo moderniai, bet ir padeda jūsų verslui augti.
               </p>
@@ -55,8 +55,8 @@ const WebDevelopmentPage = () => {
             
             <div className="hidden md:block">
               <div className="relative w-full h-64">
-                <div className="absolute right-0 top-0 w-48 h-48 bg-fuchsia-600/20 backdrop-blur-xl rounded-full" />
-                <div className="absolute right-24 top-24 w-32 h-32 bg-indigo-600/20 backdrop-blur-xl rounded-full" />
+                <div className="absolute right-0 top-0 w-48 h-48 bg-fuchsia-200/50 dark:bg-fuchsia-600/20 backdrop-blur-xl rounded-full" />
+                <div className="absolute right-24 top-24 w-32 h-32 bg-indigo-200/50 dark:bg-indigo-600/20 backdrop-blur-xl rounded-full" />
               </div>
             </div>
           </div>
@@ -64,11 +64,11 @@ const WebDevelopmentPage = () => {
       </div>
 
       {/* Paslaugų sekcija */}
-      <div className="py-24 px-4 md:px-12 lg:px-24 bg-zinc-900">
+      <div className="py-24 px-4 md:px-12 lg:px-24 bg-zinc-50 dark:bg-zinc-900">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start mb-16">
             <h2 className="text-4xl font-bold mb-4 md:mb-0">Mūsų<br />Paslaugos</h2>
-            <p className="text-gray-400 md:max-w-md">
+            <p className="text-zinc-600 dark:text-gray-400 md:max-w-md">
               Naudojame naujausias technologijas ir inovatyvius sprendimus, 
               kad sukurtume jūsų verslui optimalų skaitmeninį sprendimą.
             </p>
@@ -78,12 +78,12 @@ const WebDevelopmentPage = () => {
             {services.map((service, index) => (
               <Card 
                 key={index}
-                className="bg-zinc-800 border border-zinc-700 hover:border-fuchsia-600 transition-all duration-300"
+                className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:border-fuchsia-600 transition-all duration-300"
               >
                 <CardBody className="p-6">
                   <div className="mb-4 text-fuchsia-600">{service.icon}</div>
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-gray-400">{service.description}</p>
+                  <p className="text-zinc-600 dark:text-gray-400">{service.description}</p>
                 </CardBody>
               </Card>
             ))}
@@ -92,12 +92,12 @@ const WebDevelopmentPage = () => {
       </div>
 
       {/* Procesas */}
-      <div className="py-24 px-4 md:px-12 lg:px-24 bg-black w-full overflow-x-hidden">
+      <div className="py-24 px-4 md:px-12 lg:px-24 bg-white dark:bg-black w-full overflow-x-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-24 max-w-full">
             <div>
               <h2 className="text-4xl font-bold mb-8">Mūsų darbo procesas</h2>
-              <p className="text-gray-400 mb-8">
+              <p className="text-zinc-600 dark:text-gray-400 mb-8">
                 Sistematiškas požiūris į projektų įgyvendinimą užtikrina 
                 aukščiausią kokybę ir efektyvumą.
               </p>
@@ -114,7 +114,7 @@ const WebDevelopmentPage = () => {
               {['Analizė', 'Strategija', 'Dizainas', 'Vystymas'].map((step, index) => (
                 <div key={index} className="flex items-center gap-4 w-full">
                   <span className="text-2xl font-bold text-fuchsia-600 whitespace-nowrap">0{index + 1}</span>
-                  <Divider className="w-24 md:w-32 bg-zinc-800" />
+                  <Divider className="w-24 md:w-32 bg-zinc-200 dark:bg-zinc-800" />
                   <span className="text-xl whitespace-nowrap">{step}</span>
                 </div>
               ))}
@@ -124,11 +124,11 @@ const WebDevelopmentPage = () => {
       </div>
 
       {/* Portfolio sekcija */}
-      <div className="py-24 px-4 md:px-12 lg:px-24 bg-zinc-900">
+      <div className="py-24 px-4 md:px-12 lg:px-24 bg-zinc-50 dark:bg-zinc-900">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start mb-16">
             <h2 className="text-4xl font-bold mb-4 md:mb-0">Mūsų<br />Portfolio</h2>
-            <p className="text-gray-400 md:max-w-md">
+            <p className="text-zinc-600 dark:text-gray-400 md:max-w-md">
               Kiekvienas projektas - unikalus sprendimas, atspindintis kliento poreikius ir mūsų ekspertizę.
             </p>
           </div>
@@ -137,32 +137,24 @@ const WebDevelopmentPage = () => {
             {[
               {
                 title: "E-Commerce Platforma",
-                type: "Elektroninė parduotuvė",
-                image: "/api/placeholder/600/400",
-                tech: "Next.js, TailwindCSS"
+                image: "/api/placeholder/600/400"
               },
               {
                 title: "Kelionių Agentūra",
-                type: "Paslaugų svetainė",
-                image: "/api/placeholder/600/400",
-                tech: "React, MaterialUI"
+                image: "/api/placeholder/600/400"
               },
               {
                 title: "Medicinos Klinika",
-                type: "Korporatyvinė svetainė",
-                image: "/api/placeholder/600/400",
-                tech: "Next.js, ShadcnUI"
+                image: "/api/placeholder/600/400"
               },
               {
                 title: "Statybų Kompanija",
-                type: "Reprezentacinė svetainė",
-                image: "/api/placeholder/600/400",
-                tech: "Vite, TailwindCSS"
+                image: "/api/placeholder/600/400"
               }
             ].map((project, index) => (
               <Card 
                 key={index}
-                className="bg-zinc-800 border border-zinc-700 hover:border-fuchsia-600 transition-all duration-300 group"
+                className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:border-fuchsia-600 transition-all duration-300 group"
               >
                 <CardBody className="p-0">
                   <img 
@@ -171,9 +163,7 @@ const WebDevelopmentPage = () => {
                     src={project.image}
                   />
                   <div className="p-6">
-                    <p className="text-gray-400 text-sm mb-2">{project.type}</p>
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-fuchsia-600 text-sm">{project.tech}</p>
+                    <h3 className="text-xl font-bold">{project.title}</h3>
                   </div>
                 </CardBody>
               </Card>
@@ -183,10 +173,10 @@ const WebDevelopmentPage = () => {
       </div>
 
       {/* Tech stack sekcija */}
-      <div className="py-24 px-4 md:px-12 lg:px-24 bg-black">
+      <div className="py-24 px-4 md:px-12 lg:px-24 bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-16">Technologijos</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
             {[
               'React', 
               'Next.js', 
@@ -199,7 +189,7 @@ const WebDevelopmentPage = () => {
             ].map((tech, index) => (
               <div 
                 key={index}
-                className="p-8 border border-zinc-800 rounded-lg hover:border-fuchsia-600 transition-all duration-300"
+                className="p-8 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-fuchsia-600 transition-all duration-300"
               >
                 <span className="text-xl font-mono">{tech}</span>
               </div>
