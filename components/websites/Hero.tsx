@@ -14,7 +14,7 @@ export const Hero = ({ title, description, buttonText }: HeroProps) => {
       
       <div className="relative h-4/5 md:h-full flex flex-col justify-center px-4 md:px-12 lg:px-24">
         <div className="border-l-4 border-fuchsia-600 pl-6 mb-12">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          <h1 className="text-4xl md:text-7xl font-bold mb-4">
             {title}
             <span className="text-fuchsia-600">.</span>
           </h1>

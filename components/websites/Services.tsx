@@ -43,7 +43,7 @@ export const Services = ({ title, description, services }: ServicesProps) => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:border-fuchsia-600 transition-all duration-300"
+              className="bg-[radial-gradient(circle_at_50%_120%,#FAE8FF,#FFFFFF)] dark:bg-[radial-gradient(circle_at_50%_120%,#3B0764,#000000)] border border-zinc-200 dark:border-zinc-700 hover:border-fuchsia-600 transition-all duration-300"
             >
               <div className="mb-4 text-fuchsia-600">
                 <IconComponent icon={service.icon} />

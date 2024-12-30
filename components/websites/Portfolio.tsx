@@ -17,9 +17,9 @@ export const Portfolio = ({ title, description, projects }: PortfolioProps) => {
   return (
     <div className="py-24 px-1 md:px-12 lg:px-24 bg-zinc-50 dark:bg-zinc-900">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16">
+        <div className="flex flex-col items-center md:flex-row justify-between mb-16">
           <h2 className="text-4xl font-bold mb-4 md:mb-0">{title}</h2>
-          <p className="text-zinc-600 dark:text-gray-400 md:max-w-md">
+          <p className="text-zinc-600 dark:text-gray-400 md:max-w-md pl-2">
             {description}
           </p>
         </div>
