@@ -1,15 +1,15 @@
 'use client';
 
 import React from 'react';
-import { Card, CardBody, Button, Divider } from '@nextui-org/react';
+import { Card, CardBody, Button } from '@nextui-org/react';
 import { Code2, Palette, Smartphone } from 'lucide-react';
 
 const WebDevelopmentPage = () => {
   const services = [
     {
       icon: <Code2 className="w-8 h-8" />,
-      title: "SEO optimizacija",
-      description: "Užtikriname aukštas pozicijas paieškos sistemose ir didesnį lankytojų srautą"
+      title: "SEO ir AI optimizacija",
+      description: "Aukštos pozicijas paieškos sistemose ir AI platformose"
     },
     {
       icon: <Palette className="w-8 h-8" />,
@@ -29,9 +29,9 @@ const WebDevelopmentPage = () => {
       <div className="relative h-screen">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#FAE8FF,#FFFFFF)] dark:bg-[radial-gradient(circle_at_50%_120%,#3B0764,#000000)]" />
         
-        <div className="relative h-full flex flex-col justify-center px-4 md:px-12 lg:px-24">
+        <div className="relative h-4/5 md:h-full  flex flex-col justify-center px-4 md:px-12 lg:px-24">
           <div className="border-l-4 border-fuchsia-600 pl-6 mb-12">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 ">
               Svetainių
               <br />
               Kūrimas
@@ -43,7 +43,7 @@ const WebDevelopmentPage = () => {
             <div>
               <p className="text-xl text-zinc-600 dark:text-gray-400 mb-8">
                 Kuriame išskirtinius ir inovatyvius skaitmeninius sprendimus, 
-                kurie ne tik atrodo moderniai, bet ir padeda jūsų verslui augti.
+                kurie atrodo moderniai, patogūs naudoti ir padeda jūsų verslui augti.
               </p>
               <Button 
                 className="bg-fuchsia-600 text-white font-bold hover:bg-fuchsia-700"
@@ -91,37 +91,7 @@ const WebDevelopmentPage = () => {
         </div>
       </div>
 
-      {/* Procesas */}
-      <div className="py-24 px-4 md:px-12 lg:px-24 bg-white dark:bg-black w-full overflow-x-hidden">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-24 max-w-full">
-            <div>
-              <h2 className="text-4xl font-bold mb-8">Mūsų darbo procesas</h2>
-              <p className="text-zinc-600 dark:text-gray-400 mb-8">
-                Sistematiškas požiūris į projektų įgyvendinimą užtikrina 
-                aukščiausią kokybę ir efektyvumą.
-              </p>
-              <Button 
-                className="border-fuchsia-600 text-fuchsia-600 hover:bg-fuchsia-600 hover:text-white" 
-                size="lg"
-                variant="bordered"
-              >
-                Sužinoti daugiau
-              </Button>
-            </div>
 
-            <div className="space-y-8">
-              {['Analizė', 'Strategija', 'Dizainas', 'Vystymas'].map((step, index) => (
-                <div key={index} className="flex items-center gap-4 w-full">
-                  <span className="text-2xl font-bold text-fuchsia-600 whitespace-nowrap">0{index + 1}</span>
-                  <Divider className="w-24 md:w-32 bg-zinc-200 dark:bg-zinc-800" />
-                  <span className="text-xl whitespace-nowrap">{step}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Portfolio sekcija */}
       <div className="py-24 px-4 md:px-12 lg:px-24 bg-zinc-50 dark:bg-zinc-900">

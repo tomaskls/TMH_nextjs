@@ -6,7 +6,7 @@ import { GOOGLE_ADS_SERVICES, META_ADS_SERVICES } from '@/components/constants/a
 
 export default function AdsPage() {
   return (
-    <main className="container mx-auto py-12 px-4">
+    <main className="bg-gray-50 dark:bg-black container mx-auto py-12 px-4">
       <section className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">Skaitmeninės Reklamos Paslaugos</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
