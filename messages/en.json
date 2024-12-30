@@ -192,6 +192,45 @@
       "highlight": "Average +150% organic search traffic in 6 months",
       "storiesButton": "View Success Stories"
     }
-  }
+  },
+  
+    "webDevelopment": {
+      "hero": {
+        "title": "Website\nDevelopment",
+        "description": "We create exceptional and innovative digital solutions that look modern, are user-friendly, and help your business grow.",
+        "startButton": "Start a Project"
+      },
+      "services": {
+        "title": "Our\nServices",
+        "description": "We use the latest technologies and innovative solutions to create an optimal digital solution for your business.",
+        "seo": {
+          "title": "SEO and AI Optimization",
+          "description": "High positions in search engines and AI platforms"
+        },
+        "design": {
+          "title": "UX/UI Design",
+          "description": "Modern design with great user experience and intuitive navigation"
+        },
+        "mobile": {
+          "title": "Mobile Version",
+          "description": "Perfect functionality on all devices and screen sizes"
+        }
+      },
+      "portfolio": {
+        "title": "Our\nPortfolio",
+        "description": "Each project is a unique solution reflecting client needs and our expertise.",
+        "projects": {
+          "ecommerce": "Sewing Studio",
+          "travel": "Airport Taxi Service",
+          "medical": "Privat Chef",
+          "construction": "Car Repair Shop"
+        }
+      },
+      "techStack": {
+        "title": "Technologies"
+      }
+    }
+  
+
 }
 

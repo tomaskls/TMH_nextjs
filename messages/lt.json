@@ -193,6 +193,43 @@
       "highlight": "Vidutiniškai +150% organinės paieškos srautas per 6 mėnesius",
       "storiesButton": "Peržiūrėti sėkmės istorijas"
     }
+  },
+  
+    "webDevelopment": {
+      "hero": {
+        "title": "Svetainių\nKūrimas",
+        "description": "Kuriame išskirtinius ir inovatyvius skaitmeninius sprendimus, kurie atrodo moderniai, patogūs naudoti ir padeda jūsų verslui augti.",
+        "startButton": "Pradėkime projektą"
+      },
+      "services": {
+        "title": "Mūsų\nPaslaugos",
+        "description": "Naudojame naujausias technologijas ir inovatyvius sprendimus, kad sukurtume jūsų verslui optimalų skaitmeninį sprendimą.",
+        "seo": {
+          "title": "SEO ir AI optimizacija",
+          "description": "Aukštos pozicijas paieškos sistemose ir AI platformose"
+        },
+        "design": {
+          "title": "UX/UI Dizainas",
+          "description": "Modernus dizainas su puikia vartotojo patirtimi ir intuityvia navigacija"
+        },
+        "mobile": {
+          "title": "Mobili versija",
+          "description": "Tobulas veikimas visuose įrenginiuose ir ekranų dydžiuose"
+        }
+      },
+      "portfolio": {
+        "title": "Mūsų\nPortfolio",
+        "description": "Kiekvienas projektas - unikalus sprendimas, atspindintis kliento poreikius ir mūsų ekspertizę.",
+        "projects": {
+          "ecommerce": "Siuvimo Studija",
+          "travel": "Oro Uosto Taksi",
+          "medical": "Privatus Šefas",
+          "construction": "U2 Autoservisas"
+        }
+      },
+      "techStack": {
+        "title": "Technologijos"
+      }
+    }
   }
 
-}

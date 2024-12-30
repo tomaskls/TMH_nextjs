@@ -26,12 +26,11 @@ export default function ContactForm() {
 
   const t = useTranslations('contact');
 
-  // Pakeiskite į savo kontaktinę informaciją
   const contactInfo = {
-    email: 'your.email@example.com',
-    phone: '+37060000000',
-    facebook: 'https://facebook.com/your.page',
-    instagram: 'https://instagram.com/your.profile',
+    email: 'info@tmh.lt',
+    phone: '+37060574525',
+    facebook: 'https://facebook.com/tomorrowsmediahouse',
+    instagram: 'https://instagram.com/tomorrowsmediahouse',
   };
 
   const formAction = `https://formsubmit.co/${contactInfo.email}`;
