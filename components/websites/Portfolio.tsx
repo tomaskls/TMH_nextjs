@@ -15,7 +15,7 @@ interface PortfolioProps {
 
 export const Portfolio = ({ title, description, projects }: PortfolioProps) => {
   return (
-    <div className="py-24 px-4 md:px-12 lg:px-24 bg-zinc-50 dark:bg-zinc-900">
+    <div className="py-24 px-1 md:px-12 lg:px-24 bg-zinc-50 dark:bg-zinc-900">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start mb-16">
           <h2 className="text-4xl font-bold mb-4 md:mb-0">{title}</h2>
@@ -36,8 +36,9 @@ export const Portfolio = ({ title, description, projects }: PortfolioProps) => {
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                 src={project.image}
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent flex justify-between items-center">
-                <h3 className="text-xl font-bold text-white ">{project.title}</h3>
+              <div className="absolute bottom-0 left-0 right-0 p-1
+            py-2 px-4 bg-gradient-to-t from-black/70 to-black/20 flex flex-col md:flex-row justify-between items-end md:items-center gap-2">
+                <h3 className=" py-1 px-2 text-xl font-bold text-white ">{project.title}</h3>
                 <a
                   className="inline-block px-4 py-2 bg-fuchsia-600 text-white rounded hover:bg-fuchsia-700 transition-colors"
                   href={project.demoUrl}

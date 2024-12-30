@@ -31,22 +31,22 @@ export default async function WebDevelopmentPage() {
     {
       title: t('portfolio.projects.ecommerce'),
       image: "/projects/studija.png",
-      demoUrl: "https://example-ecommerce.com"
+      demoUrl: "https://www.neringos-siuvimo-studija.lt"
     },
     {
       title: t('portfolio.projects.travel'),
       image: "/projects/transport_app.png",
-      demoUrl: "https://example-ecommerce.com"
+      demoUrl: "https://transport-nextjs-henna.vercel.app/lt"
     },
     {
       title: t('portfolio.projects.medical'),
       image: "/projects/chef.png",
-      demoUrl: "https://example-ecommerce.com"
+      demoUrl: "https://cheffabio.netlify.app/"
     },
     {
       title: t('portfolio.projects.construction'),
       image: "/projects/u2.png",
-      demoUrl: "https://example-ecommerce.com"
+      demoUrl: "https://www.u2motors.lt"
     }
   ];
 
