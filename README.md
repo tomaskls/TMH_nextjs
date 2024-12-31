@@ -1,53 +1,101 @@
-# Next.js & NextUI Template
+# Tomorrows Media House Website
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+Official website of Tomorrows Media House, a company specializing in professional website development.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+## 🎯 Project Goals
 
-## Technologies Used
+1. Present Tomorrows Media House's services and activities
+2. Demonstrate company's technical capabilities through modern and innovative website design
+3. Showcase portfolio of completed projects
+4. Ensure website accessibility in multiple languages
+5. Optimize website for search engines (SEO)
+6. Ensure excellent website performance across all devices (Responsive Design)
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+## 🛠 Technologies
 
-## How to Use
+- [React 18.3.1](https://react.dev/) - JavaScript library for user interfaces
+- [Next.js 15](https://nextjs.org/) - React framework
+- [NextUI v2](https://nextui.org/) - Modern UI component library
+- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
+- [next-intl](https://next-intl-docs.vercel.app/) - Internationalization solution
+- [next-themes](https://github.com/pacocoursey/next-themes) - Dark/Light theme support
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
 
-### Use the template with create-next-app
+## 📂 Project Structure
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+```
+my-website2/
+├── app/                    # Main application directory
+│   ├── [locale]/          # Localization directory
+│   └── layout.tsx         # Main layout component
+├── components/            # Reusable components
+├── config/               # Configuration files
+├── i18n/                 # Internationalization files
+├── messages/            # Translations
+│   ├── en.json         # English texts
+│   └── lt.json         # Lithuanian texts
+├── public/              # Static files
+│   ├── icons/         
+│   ├── logo/          
+│   └── projects/      
 ```
 
-### Install dependencies
+## 🚀 Getting Started
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
+1. Clone the repository:
 ```bash
-npm install
+git clone [repository-url]
 ```
 
-### Run the development server
+2. Install core dependencies:
+```bash
+npm install react@18.3.1 react-dom@18.3.1
+npm install next@15.0.4
+npm install @nextui-org/react@2.6.8
+npm install tailwindcss@3.4.16 postcss@8.4.49 autoprefixer@10.4.19
+npm install next-intl@3.26.1
+npm install next-themes@0.4.4
+npm install framer-motion@11.13.1
+npm install lucide-react@0.468.0
+```
 
+3. Install development dependencies:
+```bash
+npm install -D typescript@5.6.3 @types/react@18.3.3 @types/react-dom@18.3.0
+npm install -D eslint@9.17.0 prettier@3.3.3
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 ```
 
-### Setup pnpm (optional)
+The project will be available at `http://localhost:3000`
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+## 📦 Available Scripts
 
 ```bash
-public-hoist-pattern[]=*@nextui-org/*
+npm run build      # Build the project
+npm run start      # Run production version
+npm run lint       # Check code with ESLint
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## 🔧 Development
 
-## License
+The project uses:
+- ESLint and Prettier for code formatting
+- TypeScript for strict typing
+- TailwindCSS for styling
+- next-intl for internationalization
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch
+3. Make your changes
+4. Submit a Pull Request
+
+## 📄 License
+
+All rights reserved by Tomorrows Media House

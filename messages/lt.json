@@ -121,12 +121,12 @@
 
   "SEOPage": {
     "hero": {
-      "title": "SEO sprendimai, kurie augina jūsų verslą",
-      "description": "Padidinkite savo svetainės matomumą ir pritraukite daugiau klientų su mūsų SEO paslaugomis",
+      "title": "LLMO ir SEO sprendimai",
+      "description": "Ar jūsų svetainė paruošta ateičiai? Ar optimizuota AI paieškos sistemoms?",
       "auditButton": "Užsakyti nemokamą auditą"
     },
     "services": {
-      "title": "Mūsų SEO paslaugos",
+      "title": "Mūsų LLMO ir SEO paslaugos",
       "auditButton": "Užsakyti auditą",
       "items": [
         {

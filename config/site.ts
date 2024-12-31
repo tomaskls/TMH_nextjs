@@ -4,8 +4,7 @@ export const siteConfig = {
   name: 'Next.js + NextUI',
   description: 'Make beautiful websites regardless of your design experience.',
   navItems: [
-    { label: 'about', href: '/' },
-    { label: 'websites', href: '/websites' },
+    { label: 'websites', href: '/' },
     { label: 'seo', href: '/seo' },
     { label: 'adds', href: '/adds' },
     { label: 'e-stores', href: '/estores' },
@@ -13,8 +12,7 @@ export const siteConfig = {
   ],
 
   navMenuItems: [
-    { label: 'about', href: '/' },
-    { label: 'websites', href: '/websites' },
+    { label: 'websites', href: '/' },
     { label: 'seo', href: '/seo' },
     { label: 'adds', href: '/adds' },
     { label: 'e-stores', href: '/estores' },
