@@ -1,4 +1,4 @@
-// constants/adds.ts
+// app/reklamos/constants.ts
 export interface Service {
     id: number;
     title: string;
