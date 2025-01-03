@@ -1,87 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.tmh.lt/lt</loc>
 <lastmod>2024-01-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1.0</priority>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en"/>
-</url>
-<url>
-<loc>https://www.tmh.lt/lt/seo</loc>
-<lastmod>2024-01-03</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/seo"/>
-</url>
-<url>
-<loc>https://www.tmh.lt/lt/adds</loc>
-<lastmod>2024-01-03</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/adds"/>
-</url>
-<url>
-<loc>https://www.tmh.lt/lt/estores</loc>
-<lastmod>2024-01-03</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/estores"/>
-</url>
-<url>
-<loc>https://www.tmh.lt/lt/blog</loc>
-<lastmod>2024-01-03</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/blog"/>
-</url>
-<url>
-<loc>https://www.tmh.lt/lt/contact</loc>
-<lastmod>2024-01-03</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/contact"/>
 </url>
 <url>
 <loc>https://www.tmh.lt/en</loc>
 <lastmod>2024-01-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1.0</priority>
-<xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt"/>
+</url>
+<url>
+<loc>https://www.tmh.lt/lt/seo</loc>
+<lastmod>2024-01-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.tmh.lt/en/seo</loc>
 <lastmod>2024-01-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/seo"/>
+</url>
+<url>
+<loc>https://www.tmh.lt/lt/adds</loc>
+<lastmod>2024-01-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.tmh.lt/en/adds</loc>
 <lastmod>2024-01-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/adds"/>
+</url>
+<url>
+<loc>https://www.tmh.lt/lt/estores</loc>
+<lastmod>2024-01-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.tmh.lt/en/estores</loc>
 <lastmod>2024-01-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/estores"/>
+</url>
+<url>
+<loc>https://www.tmh.lt/lt/blog</loc>
+<lastmod>2024-01-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.tmh.lt/en/blog</loc>
 <lastmod>2024-01-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/blog"/>
+</url>
+<url>
+<loc>https://www.tmh.lt/lt/contact</loc>
+<lastmod>2024-01-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.tmh.lt/en/contact</loc>
 <lastmod>2024-01-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/contact"/>
 </url>
 </urlset>
