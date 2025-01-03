@@ -34,44 +34,6 @@
     }
   },
 
-  "SEOServices": {
-    "technical": {
-      "title": "Techninė SEO optimizacija",
-      "speed": "Svetainės greičio optimizavimas",
-      "mobile": "Mobiliosios versijos optimizavimas",
-      "structure": "Svetainės struktūros gerinimas",
-      "sitemap": "XML sitemap sukūrimas",
-      "robots": "Robots.txt konfigūravimas"
-    },
-    "content": {
-      "title": "Turinio optimizacija",
-      "keywords": "Raktažodžių tyrimas ir analizė",
-      "optimization": "Turinio kūrimas ir optimizavimas",
-      "meta": "Meta aprašymų rašymas",
-      "url": "URL struktūros optimizavimas",
-      "images": "Paveikslėlių optimizavimas"
-    },
-    "offpage": {
-      "title": "Off-page SEO",
-      "strategy": "Nuorodų strategijos kūrimas",
-      "backlinks": "Kokybišku backlinks gavimas",
-      "social": "Socialinių tinklų optimizacija",
-      "gmb": "Google My Business tvarkymas",
-      "local": "Lokalios SEO strategijos"
-    },
-    "analytics": {
-      "title": "Analitika ir stebėjimas",
-      "ga": "Google Analytics įdiegimas",
-      "gsc": "Google Search Console naudojimas",
-      "positions": "Pozicijų stebėjimas",
-      "competitors": "Konkurentų analizė",
-      "reports": "Reguliarios ataskaitos"
-    },
-    "common": {
-      "auditButton": "Užsakyti nemokamą auditą"
-    }
-  },
-
   "hero": {
     "badge": "Shopify Ekspertai",
     "title": "Jūsų sėkminga e-parduotuvė prasideda čia",
@@ -230,6 +192,100 @@
       "techStack": {
         "title": "Technologijos"
       }
+    },
+    
+      "ads": {
+        "title": "Skaitmeninės Reklamos Paslaugos",
+        "subtitle": "Profesionalios Google Ads ir Meta Ads reklamos paslaugos, padėsiančios pasiekti jūsų verslo tikslus",
+        "services": {
+          "google": {
+            "title": "Google Ads",
+            "description": "Optimizuotos reklamos Google paieškos sistemoje ir partnerių tinkle",
+            "features": {
+              "search": {
+                "title": "Paieškos reklamos",
+                "items": [
+                  "Raktažodžių tyrimai ir optimizavimas",
+                  "Reklaminio teksto kūrimas ir A/B testavimas",
+                  "Kainos už paspaudimą (CPC) optimizavimas",
+                  "Konversijų sekimas ir ROI analizė"
+                ]
+              },
+              "display": {
+                "title": "Display reklamos",
+                "items": [
+                  "Vaizdinių reklamos maketų kūrimas",
+                  "Auditorijos segmentavimas",
+                  "Retargeting nustatymai",
+                  "Reklamos pozicijų optimizavimas"
+                ]
+              },
+              "campaign": {
+                "title": "Kampanijų valdymas",
+                "items": [
+                  "Reklamos grupių organizavimas",
+                  "Kampanijų strategijos nustatymas",
+                  "Biudžeto paskirstymas",
+                  "Google Analytics integracija"
+                ]
+              },
+              "shopping": {
+                "title": "Shopping kampanijos",
+                "items": [
+                  "Produktų feed optimizavimas",
+                  "Produktų grupių struktūros kūrimas",
+                  "Smart Shopping kampanijų valdymas",
+                  "Kryžminio pardavimo strategijos"
+                ]
+              }
+            }
+          },
+          "meta": {
+            "title": "Meta Ads",
+            "description": "Efektyvios reklamos Facebook ir Instagram platformose",
+            "features": {
+              "feed": {
+                "title": "Feed reklamos",
+                "items": [
+                  "Reklaminio turinio kūrimas",
+                  "Vaizdo ir teksto formatai",
+                  "Karuselių reklamos",
+                  "Stories reklamos"
+                ]
+              },
+              "audience": {
+                "title": "Auditorijų valdymas",
+                "items": [
+                  "Interests-based targetavimas",
+                  "Custom auditorijos kūrimas",
+                  "Lookalike auditorijos",
+                  "Retargeting auditorijos"
+                ]
+              },
+              "optimization": {
+                "title": "Kampanijų optimizavimas",
+                "items": [
+                  "Biudžeto planavimas",
+                  "Delivery optimizavimas",
+                  "A/B testavimas",
+                  "Kainos optimizavimas (CPC, CPM)"
+                ]
+              },
+              "tracking": {
+                "title": "Tracking ir analitika",
+                "items": [
+                  "Meta Pixel įdiegimas",
+                  "Konversijų sekimas",
+                  "Events konfigūracija",
+                  "CAPI integracija"
+                ]
+              }
+            }
+          }
+        }
+      }
     }
-  }
+      
+    
+  
 

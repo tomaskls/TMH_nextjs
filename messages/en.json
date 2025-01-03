@@ -34,43 +34,6 @@
     }
   },
 
-  "SEOServices": {
-    "technical": {
-      "title": "Technical SEO Optimization",
-      "speed": "Website Speed Optimization",
-      "mobile": "Mobile Version Optimization",
-      "structure": "Website Structure Improvement",
-      "sitemap": "XML Sitemap Creation",
-      "robots": "Robots.txt Configuration"
-    },
-    "content": {
-      "title": "Content Optimization",
-      "keywords": "Keyword Research and Analysis",
-      "optimization": "Content Creation and Optimization",
-      "meta": "Meta Descriptions Writing",
-      "url": "URL Structure Optimization",
-      "images": "Image Optimization"
-    },
-    "offpage": {
-      "title": "Off-page SEO",
-      "strategy": "Link Building Strategy",
-      "backlinks": "Quality Backlinks Acquisition",
-      "social": "Social Media Optimization",
-      "gmb": "Google My Business Management",
-      "local": "Local SEO Strategies"
-    },
-    "analytics": {
-      "title": "Analytics and Monitoring",
-      "ga": "Google Analytics Implementation",
-      "gsc": "Google Search Console Usage",
-      "positions": "Position Tracking",
-      "competitors": "Competitor Analysis",
-      "reports": "Regular Reports"
-    },
-    "common": {
-      "auditButton": "Order Free Audit"
-    }
-  },
   "hero": {
     "badge": "Shopify Experts",
     "title": "Your successful e-store starts here",
@@ -229,8 +192,99 @@
       "techStack": {
         "title": "Technologies"
       }
-    }
+    },
   
+    
+      "ads": {
+        "title": "Digital Advertising Services",
+        "subtitle": "Professional Google Ads and Meta Ads services to help achieve your business goals",
+        "services": {
+          "google": {
+            "title": "Google Ads",
+            "description": "Optimized advertising on Google search engine and partner network",
+            "features": {
+              "search": {
+                "title": "Search Advertising",
+                "items": [
+                  "Keyword research and optimization",
+                  "Ad copy creation and A/B testing",
+                  "Cost per click (CPC) optimization",
+                  "Conversion tracking and ROI analysis"
+                ]
+              },
+              "display": {
+                "title": "Display Advertising",
+                "items": [
+                  "Visual ad creative design",
+                  "Audience segmentation",
+                  "Retargeting setup",
+                  "Ad placement optimization"
+                ]
+              },
+              "campaign": {
+                "title": "Campaign Management",
+                "items": [
+                  "Ad group organization",
+                  "Campaign strategy setup",
+                  "Budget allocation",
+                  "Google Analytics integration"
+                ]
+              },
+              "shopping": {
+                "title": "Shopping Campaigns",
+                "items": [
+                  "Product feed optimization",
+                  "Product group structure creation",
+                  "Smart Shopping campaign management",
+                  "Cross-selling strategies"
+                ]
+              }
+            }
+          },
+          "meta": {
+            "title": "Meta Ads",
+            "description": "Effective advertising on Facebook and Instagram platforms",
+            "features": {
+              "feed": {
+                "title": "Feed Ads",
+                "items": [
+                  "Ad content creation",
+                  "Video and text formats",
+                  "Carousel ads",
+                  "Stories ads"
+                ]
+              },
+              "audience": {
+                "title": "Audience Management",
+                "items": [
+                  "Interests-based targeting",
+                  "Custom audience creation",
+                  "Lookalike audiences",
+                  "Retargeting audiences"
+                ]
+              },
+              "optimization": {
+                "title": "Campaign Optimization",
+                "items": [
+                  "Budget planning",
+                  "Delivery optimization",
+                  "A/B testing",
+                  "Price optimization (CPC, CPM)"
+                ]
+              },
+              "tracking": {
+                "title": "Tracking and Analytics",
+                "items": [
+                  "Meta Pixel installation",
+                  "Conversion tracking",
+                  "Events configuration",
+                  "CAPI integration"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
 
-}
 
