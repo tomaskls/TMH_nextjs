@@ -6,7 +6,7 @@
     <url>
         <loc>https://www.tmh.lt/lt</loc>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/lt"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en"/>
         <lastmod>2024-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -16,7 +16,7 @@
     <url>
         <loc>https://www.tmh.lt/en</loc>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/lt"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en"/>
         <lastmod>2024-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -55,7 +55,7 @@
     <!-- Reklamos puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/adds</loc>
-        <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/ads"/>
+        <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/adds"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/adds"/>
         <lastmod>2024-01-03</lastmod>
         <changefreq>monthly</changefreq>
