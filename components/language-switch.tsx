@@ -11,7 +11,6 @@ export const LanguageSwitch = () => {
 
   const toggleLocale = () => {
     const newLocale = locale === 'en' ? 'lt' : 'en';
-    // Pašaliname esamą lokalę iš kelio
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
 
     router.push(newPath);
@@ -25,7 +24,7 @@ export const LanguageSwitch = () => {
       variant="solid"
       onPress={toggleLocale}
     >
-      {locale.toUpperCase()}
+      {locale === 'en' ? 'LT' : 'EN'}
     </Button>
   );
 };
