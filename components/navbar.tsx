@@ -19,7 +19,7 @@ import clsx from 'clsx';
 
 import { LanguageSwitch } from '@/components/language-switch';
 import { ThemeSwitch } from '@/components/theme-switch';
-import {Logo} from '@/components/logo/Logo'
+import { Logo } from '@/components/logo/Logo'
 import { siteConfig } from '@/config/site';
 
 export const Navbar = () => {
@@ -35,9 +35,11 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full justify-start items-center gap-10" >
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo style={{width: '100px', height: '100px'}} className=' mt-4' />
-            <p className="hidden md:inline font-bold text-inherit text-lg ml-6"><span className='text-fuchsia-500'>Tomo</span>rrow's Media House</p>
+          <NextLink aria-label="Tomorrow's Media House" className="flex justify-start items-center gap-1" href="/">
+            <Logo aria-hidden="true" className='mt-4' style={{ width: '100px', height: '100px' }} />
+            <p className="hidden md:inline font-bold text-inherit text-lg ml-6">
+              <span className='text-fuchsia-500'>Tomo</span>rrow's Media House
+            </p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-6">
@@ -62,8 +64,10 @@ export const Navbar = () => {
         className="hidden lg:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden lg:flex gap-2">
+        <NavbarItem className="hidden lg:flex">
           <LanguageSwitch />
+        </NavbarItem>
+        <NavbarItem className="hidden lg:flex">
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
@@ -77,7 +81,6 @@ export const Navbar = () => {
           </Button>
         </NavbarItem>
       </NavbarContent>
-
       <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
         <LanguageSwitch />
         <ThemeSwitch />
