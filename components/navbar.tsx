@@ -43,31 +43,31 @@ export const Navbar = () => {
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-6">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-primary data-[active=true]:font-medium '
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {t(item.label)}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
+  {siteConfig.navItems.map((item) => (
+    <li key={item.href}>
+      <NavbarItem>
+        <NextLink
+          className={clsx(
+            linkStyles({ color: 'foreground' }),
+            'data-[active=true]:text-primary data-[active=true]:font-medium '
+          )}
+          color="foreground"
+          href={item.href}
+        >
+          {t(item.label)}
+        </NextLink>
+      </NavbarItem>
+    </li>
+  ))}
+</ul>
       </NavbarContent>
 
-      <NavbarContent
+     <NavbarContent
         className="hidden lg:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden lg:flex">
+        <NavbarItem className="hidden lg:flex gap-2">
           <LanguageSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
@@ -81,6 +81,7 @@ export const Navbar = () => {
           </Button>
         </NavbarItem>
       </NavbarContent>
+
       <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
         <LanguageSwitch />
         <ThemeSwitch />
