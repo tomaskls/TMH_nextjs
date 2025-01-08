@@ -42,24 +42,22 @@ export const Navbar = () => {
             </p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-6">
-  {siteConfig.navItems.map((item) => (
-    <li key={item.href}>
-      <NavbarItem>
-        <NextLink
-          className={clsx(
-            linkStyles({ color: 'foreground' }),
-            'data-[active=true]:text-primary data-[active=true]:font-medium '
-          )}
-          color="foreground"
-          href={item.href}
-        >
-          {t(item.label)}
-        </NextLink>
-      </NavbarItem>
-    </li>
-  ))}
-</ul>
+        <div className="hidden lg:flex gap-4 justify-start ml-6">
+          {siteConfig.navItems.map((item) => (
+            <NavbarItem key={item.href}>
+              <NextLink
+                className={clsx(
+                  linkStyles({ color: 'foreground' }),
+                  'data-[active=true]:text-primary data-[active=true]:font-medium '
+                )}
+                color="foreground"
+                href={item.href}
+              >
+                {t(item.label)}
+              </NextLink>
+            </NavbarItem>
+          ))}
+        </div>
       </NavbarContent>
 
      <NavbarContent
