@@ -36,7 +36,7 @@ export default async function WebDevelopmentPage() {
     {
       title: t('portfolio.projects.travel'),
       image: "/projects/transport_app.png",
-      demoUrl: "https://transport-nextjs-henna.vercel.app/lt"
+      demoUrl: "https://www.siauliai-riga.lt"
     },
     {
       title: t('portfolio.projects.medical'),
