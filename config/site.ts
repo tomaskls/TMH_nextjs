@@ -8,7 +8,6 @@ export const siteConfig = {
     { label: 'seo', href: '/seo' },
     { label: 'adds', href: '/adds' },
     { label: 'e-stores', href: '/estores' },
-    { label: 'blog', href: '/blog' },
   ],
 
   navMenuItems: [
@@ -16,7 +15,6 @@ export const siteConfig = {
     { label: 'seo', href: '/seo' },
     { label: 'adds', href: '/adds' },
     { label: 'e-stores', href: '/estores' },
-    { label: 'blog', href: '/blog' },
   ],
   links: {
     contact: '/contact',
