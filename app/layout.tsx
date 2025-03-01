@@ -1,7 +1,7 @@
 import React from 'react';
 import '@/styles/globals.css';
 import clsx from 'clsx';
-import { GoogleAnalytics } from '@next/third-parties/google'
+// import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { fontSans } from '@/config/fonts';
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       >
         {children}
       </body>
-      <GoogleAnalytics gaId=" G-JG3D0F2T25" />
+      {/* <GoogleAnalytics gaId=" G-JG3D0F2T25" /> */}
     </html>
   );
 }

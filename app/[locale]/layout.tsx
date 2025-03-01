@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-// import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 import { Providers } from './providers';
@@ -55,7 +55,7 @@ export default async function LocaleLayout({
           <main className="container mx-auto max-w-7xl pt-16 px-4 flex-grow">
             {children}
           </main>
-          {/* <GoogleAnalytics gaId="G-JG3D0F2T25" /> */}
+          <GoogleAnalytics gaId="G-JG3D0F2T25" />
           <Footer />
         </div>
       </Providers>
