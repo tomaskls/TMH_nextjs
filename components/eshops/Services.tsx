@@ -45,7 +45,7 @@ export function Services() {
                     key={index}
                     className="flex items-center text-gray-600 dark:text-gray-300"
                   >
-                    <div className="w-2 h-2 bg-[#526752] dark:bg-[#8fa88f] rounded-full mr-2"></div>
+                    <div className="w-2 h-2 bg-[#526752] dark:bg-[#8fa88f] rounded-full mr-2" />
                     {feature}
                   </li>
                 ))}

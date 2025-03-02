@@ -1,8 +1,22 @@
 import { useTranslations } from 'next-intl';
-import { Button } from '@nextui-org/react';
+import { Button, Modal, ModalContent, ModalHeader, ModalBody, Link } from '@nextui-org/react';
+import Image from 'next/image';
+import { useState } from 'react';
 
 export function Hero() {
   const t = useTranslations('hero');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  // Nuorodų duomenys su pilnais URL adresais
+  const portfolioLinks = [
+    { title: 'Vetprekes.lt', url: 'https://www.vetprekes.lt' },
+    { title: 'OEM Dalys', url: 'https://vet55.myshopify.com/' },
+    // { title: 'Projektas 3', url: 'https://www.example.com/project3' },
+    // { title: 'Projektas 4', url: 'https://www.example.com/project4' },
+  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
@@ -19,7 +33,9 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Button
+            as={Link}
               className="w-full sm:w-auto font-semibold bg-[#526752] dark:bg-[#8fa88f] text-white"
+              href='/contact'
               size="lg"
             >
               {t('buttons.proposal')}
@@ -28,6 +44,7 @@ export function Hero() {
               className="w-full sm:w-auto font-semibold text-[#526752] dark:text-[#8fa88f] border-[#526752] dark:border-[#8fa88f]"
               size="lg"
               variant="bordered"
+              onPress={openModal}
             >
               {t('buttons.portfolio')}
             </Button>
@@ -36,19 +53,41 @@ export function Hero() {
         <div className="mt-12 lg:mt-0 lg:block">
           <div className="relative">
             <div className="absolute inset-0 bg-[#526752] dark:bg-[#8fa88f] rounded-3xl transform rotate-3" />
-            <div className="relative bg-white dark:bg-gray-800 p-4 sm:p-6 lg:p-8 rounded-3xl shadow-xl">
-              <div className="space-y-4">
-                <div className="w-full h-4 bg-[#edf2ed] dark:bg-[#2a332a] rounded" />
-                <div className="w-3/4 h-4 bg-[#edf2ed] dark:bg-[#2a332a] rounded" />
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="h-16 md:h-20 bg-[#edf2ed] dark:bg-[#2a332a] rounded" />
-                  <div className="h-16 md:h-20 bg-[#edf2ed] dark:bg-[#2a332a] rounded" />
-                </div>
-              </div>
+            <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden">
+              <Image
+                priority
+                alt="Hero image"
+                className="w-full h-auto"
+                height={400}
+                src="/projects/vetprekes.png"
+                width={600}
+              />
             </div>
           </div>
         </div>
       </div>
+
+      {/* Portfolio nuorodų modalinis langas */}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <ModalContent>
+          <ModalHeader className="text-[#526752] dark:text-[#8fa88f]">Portfolio projektai</ModalHeader>
+          <ModalBody className="pb-6">
+            <div className="grid gap-4">
+              {portfolioLinks.map((link, index) => (
+                <Link 
+                  key={index} 
+                  className="text-[#526752] dark:text-[#8fa88f] hover:underline p-2 border border-[#e5ede5] dark:border-[#2a332a] rounded-lg"
+                  href={link.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </div>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 }

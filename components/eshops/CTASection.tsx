@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Card, CardBody, Button } from '@nextui-org/react';
+import { Link } from '@nextui-org/link';
 
 export function CTASection() {
   const t = useTranslations('cta');
@@ -13,8 +14,10 @@ export function CTASection() {
             {t('description')}
           </p>
           <Button
-            size="lg"
+            as={Link}
             className="bg-white dark:bg-gray-800 text-[#526752] dark:text-[#8fa88f] font-semibold"
+            href='/contact'
+            size="lg"
           >
             {t('button')}
           </Button>
