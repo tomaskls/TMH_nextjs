@@ -2,13 +2,13 @@ import React from 'react';
 import { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import { Providers } from './providers';
 
 import Footer from '@/components/Footer';
 import { Navbar } from '@/components/navbar';
+import CookieConsent from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
   title: "Tomorrow's Media House", 
@@ -55,8 +55,22 @@ export default async function LocaleLayout({
           <main className="container mx-auto max-w-7xl pt-16 px-4 flex-grow">
             {children}
           </main>
+          {/* Configure Google Analytics with default consent mode */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                  'analytics_storage': 'denied',
+                  'ad_storage': 'denied'
+                });
+              `,
+            }}
+          />
           <GoogleAnalytics gaId="G-WDJG28XFBK" />
           <Footer />
+          <CookieConsent />
         </div>
       </Providers>
     </NextIntlClientProvider>

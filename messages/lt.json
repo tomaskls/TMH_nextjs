@@ -10,6 +10,23 @@
     "contact": "Susisiekite",
     "company": "Tomorow's media house"
   },
+ "cookies": {
+    "cookieConsentTitle": "Ši svetainė naudoja slapukus",
+    "cookieConsentText": "Naudojame slapukus, kad pagerintume jūsų naršymo patirtį, analizuotume svetainės srautą ir personalizuotume turinį. Spustelėdami \"Priimti visus\", sutinkate su mūsų slapukų naudojimu.",
+    "acceptAll": "Priimti visus",
+    "customizeSettings": "Pritaikyti nustatymus",
+    "essentialOnly": "Tik būtinieji",
+    "cookieSettings": "Slapukų nustatymai",
+    "essentialCookies": "Būtinieji slapukai",
+    "essentialCookiesInfo": "Šie slapukai yra būtini svetainės veikimui ir negali būti išjungti.",
+    "analyticsCookies": "Analitiniai slapukai",
+    "analyticsCookiesInfo": "Šie slapukai leidžia mums analizuoti svetainės naudojimą, kad pagerintume svetainės veikimą ir vartotojo patirtį.",
+    "marketingCookies": "Rinkodaros slapukai",
+    "marketingCookiesInfo": "Šie slapukai padeda mums pateikti aktualesnius skelbimus ir sekti jų efektyvumą.",
+    "savePreferences": "Išsaugoti nustatymus",
+    "back": "Atgal",
+    "manageCookies": "Slapukų nustatymai"
+  },
   "contact": {
     "title": "Susisiekite su mumis",
     "name": "Vardas",

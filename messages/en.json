@@ -10,6 +10,23 @@
     "contact": "Contact us",
     "company": "Tomorow's media house"
   },
+  "cookies": {
+    "cookieConsentTitle": "This website uses cookies",
+    "cookieConsentText": "We use cookies to improve your browsing experience, analyze site traffic, and personalize content. By clicking \"Accept All\", you consent to our use of cookies.",
+    "acceptAll": "Accept All",
+    "customizeSettings": "Customize Settings",
+    "essentialOnly": "Essential Only",
+    "cookieSettings": "Cookie Settings",
+    "essentialCookies": "Essential Cookies",
+    "essentialCookiesInfo": "These cookies are necessary for the website to function and cannot be disabled.",
+    "analyticsCookies": "Analytics Cookies",
+    "analyticsCookiesInfo": "These cookies allow us to analyze site usage to improve our website's performance and user experience.",
+    "marketingCookies": "Marketing Cookies",
+    "marketingCookiesInfo": "These cookies help us deliver more relevant advertisements and track their effectiveness.",
+    "savePreferences": "Save Preferences",
+    "back": "Back",
+    "manageCookies": "Cookie Settings"
+  },
   "contact": {
     "title": "Contact Us",
     "name": "Name",
