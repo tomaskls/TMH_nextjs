@@ -12,7 +12,7 @@ import CookieConsent from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
   title: "Tomorrow's Media House", 
-  description: "rofesionalus tinklapių kūrimas ir SEO paslaugos, padedančios jūsų verslui augti internete. Dirbame su moderniausiomis technologijomis, užtikriname greitą svetainių veikimą ir optimizuojame jūsų matomumą Google paieškos sistemoje.",
+  description: "Profesionalus tinklapių kūrimas ir SEO paslaugos, Shopify  el. parduotuvių kūrimas ir priežiūra ",
   icons: {
     icon: '/favicon.ico',
   },

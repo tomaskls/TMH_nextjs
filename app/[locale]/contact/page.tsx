@@ -70,7 +70,7 @@ export default function ContactForm() {
       <Card>
         <CardHeader className="flex flex-col gap-3">
           <div className="flex justify-between items-center w-full">
-            <p className="text-xl">{t('title')}</p>
+            <h1 className="text-xl">{t('title')}</h1>
           </div>
           <div className="flex flex-col space-y-2 text-sm">
             <p className="flex items-center gap-2">
