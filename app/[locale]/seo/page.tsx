@@ -7,7 +7,7 @@ import { AchievementsSection } from '@/components/seo/AchievementsSection';
 
 export const metadata: Metadata = {
   title: 'SEO paslaugos | Tomorrow\'s media house',
-  description: 'Profesionalios SEO paslaugos verslui, kurios užtikrina aukščiausias pozicijas Google paieškoje. Auditas, raktažodžių analizė, optimizavimas ir rezultatų stebėsena. Padidinkite savo svetainės lankomumą jau šiandien!',
+  description: 'Profesionalios SEO paslaugos verslui, kurios užtikrina aukščiausias pozicijas Google paieškoje. Auditas, raktažodžių analizė, optimizavimas ir rezultatų stebėsena.',
 };
 
 export default function SEOPage() {
