@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl'; // Pridėtas naujas importas
 import React from 'react';
 import {
   Navbar as NextUINavbar,
@@ -20,11 +21,15 @@ import clsx from 'clsx';
 import { LanguageSwitch } from '@/components/language-switch';
 import { ThemeSwitch } from '@/components/theme-switch';
 import { Logo } from '@/components/logo/Logo'
-import { siteConfig } from '@/config/site';
+import { getSiteConfig } from '@/config/site'; // Pakeistas importas
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const t = useTranslations('navigation');
+  const locale = useLocale(); // Gaunama dabartinė lokalė
+  
+  // Gaunama konfigūracija su teisingais URL pagal lokalę
+  const config = getSiteConfig(locale);
 
   return (
     <NextUINavbar
@@ -35,7 +40,7 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full justify-start items-center gap-10" >
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink aria-label="Tomorrow's Media House" className="flex justify-start items-center gap-1" href="/">
+          <NextLink aria-label="Tomorrow's Media House" className="flex justify-start items-center gap-1" href={`/${locale}/`}>
             <Logo aria-hidden="true" className='mt-4' style={{ width: '100px', height: '100px' }} />
             <p className="hidden md:inline font-bold text-inherit text-lg ml-6">
               <span className='text-fuchsia-500'>Tomo</span>rrow's Media House
@@ -43,7 +48,7 @@ export const Navbar = () => {
           </NextLink>
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-6">
-          {siteConfig.navItems.map((item) => (
+          {config.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
@@ -72,7 +77,7 @@ export const Navbar = () => {
           <Button
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.contact}
+            href={config.links.contact}
             variant="flat"
           >
             {t('contact')}
@@ -88,7 +93,7 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
+          {config.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <NextLink
                 className={clsx(
@@ -108,7 +113,7 @@ export const Navbar = () => {
                 linkStyles({ color: 'foreground' }),
                 'data-[active=true]:text-primary data-[active=true]:font-medium'
               )}
-              href={siteConfig.links.contact}
+              href={config.links.contact}
               onClick={() => setIsMenuOpen(false)}
             >
               {t('contact')}

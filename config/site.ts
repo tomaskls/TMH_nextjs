@@ -1,22 +1,31 @@
-export type SiteConfig = typeof siteConfig;
 
-export const siteConfig = {
-  name: 'Next.js + NextUI',
-  description: 'Make beautiful websites regardless of your design experience.',
-  navItems: [
-    { label: 'websites', href: '/' },
-    { label: 'seo', href: '/seo' },
-    { label: 'adds', href: '/adds' },
-    { label: 'e-stores', href: '/estores' },
-  ],
-
-  navMenuItems: [
-    { label: 'websites', href: '/' },
-    { label: 'seo', href: '/seo' },
-    { label: 'adds', href: '/adds' },
-    { label: 'e-stores', href: '/estores' },
-  ],
-  links: {
-    contact: '/contact',
-  },
+export const getSiteConfig = (locale: string | undefined = undefined) => {
+  const localePrefix = locale ? `/${locale}` : '';
+  
+  const config = {
+    name: 'Tomorrow\'s Media House',
+    description: 'Make beautiful websites regardless of your design experience.',
+    navItems: [
+      { label: 'websites', href: `${localePrefix}/` },
+      { label: 'seo', href: `${localePrefix}/seo` },
+      { label: 'adds', href: `${localePrefix}/adds` },
+      { label: 'e-stores', href: `${localePrefix}/estores` },
+    ],
+    navMenuItems: [
+      { label: 'websites', href: `${localePrefix}/` },
+      { label: 'seo', href: `${localePrefix}/seo` },
+      { label: 'adds', href: `${localePrefix}/adds` },
+      { label: 'e-stores', href: `${localePrefix}/estores` },
+    ],
+    links: {
+      contact: `${localePrefix}/contact`,
+    },
+  };
+  
+  return config;
 };
+
+
+export const siteConfig = getSiteConfig();
+
+export type SiteConfig = typeof siteConfig;
