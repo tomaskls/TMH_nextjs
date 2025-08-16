@@ -5,59 +5,65 @@
     <!-- Pagrindinis puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en"/>
-        <lastmod>2024-01-03</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-08-16</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- Pagrindinis puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en"/>
-        <lastmod>2024-01-03</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-08-16</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- SEO puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/seo</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/seo"/>
-        <lastmod>2024-01-03</lastmod>
+        <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
 
     <!-- SEO puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/seo</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/seo"/>
-        <lastmod>2024-01-03</lastmod>
+        <lastmod>2025-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Reklamos puslapis LT (PATAISYTA: ads, ne adds) -->
+    <url>
+        <loc>https://www.tmh.lt/lt/ads</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/ads"/>
+        <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/ads"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/ads"/>
+        <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Reklamos puslapis LT -->
+    <!-- Reklamos puslapis EN (PATAISYTA: ads, ne adds) -->
     <url>
-        <loc>https://www.tmh.lt/lt/adds</loc>
-        <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/adds"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/adds"/>
-        <lastmod>2024-01-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Reklamos puslapis EN -->
-    <url>
-        <loc>https://www.tmh.lt/en/adds</loc>
-        <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/adds"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/adds"/>
-        <lastmod>2024-01-03</lastmod>
+        <loc>https://www.tmh.lt/en/ads</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/ads"/>
+        <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/ads"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/ads"/>
+        <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -65,9 +71,10 @@
     <!-- E-parduotuvių puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/estores</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/estores"/>
-        <lastmod>2024-01-03</lastmod>
+        <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -75,9 +82,10 @@
     <!-- E-parduotuvių puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/estores</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/estores"/>
-        <lastmod>2024-01-03</lastmod>
+        <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -85,41 +93,45 @@
     <!-- Blog puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/blog</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/blog"/>
-        <lastmod>2024-01-03</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-08-16</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Blog puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/blog</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/blog"/>
-        <lastmod>2024-01-03</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-08-16</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Kontaktų puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/contact</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/contact"/>
-        <lastmod>2024-01-03</lastmod>
+        <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
 
     <!-- Kontaktų puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/contact</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/contact"/>
-        <lastmod>2024-01-03</lastmod>
+        <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
 
 </urlset>
