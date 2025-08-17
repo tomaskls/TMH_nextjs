@@ -13,9 +13,8 @@ export function Hero() {
   // Nuorodų duomenys su pilnais URL adresais
   const portfolioLinks = [
     { title: 'Vetprekes.lt', url: 'https://www.vetprekes.lt' },
-    { title: 'OEM Dalys', url: 'https://vet55.myshopify.com/' },
-    { title: 'ePardavejas', url: 'https://epardavejas.lt/' },
     { title: 'Laimingos Rankos', url: 'https://www.laimingosrankos.lt/' },
+    { title: 'PureCommerce pasword-tmh', url: 'purecommerce2.myshopify.com' },
     // { title: 'Projektas 3', url: 'https://www.example.com/project3' },
     // { title: 'Projektas 4', url: 'https://www.example.com/project4' },
   ];
