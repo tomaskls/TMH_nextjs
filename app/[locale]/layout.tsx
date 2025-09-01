@@ -13,7 +13,7 @@ import { Navbar } from '@/components/navbar';
 import CookieConsent from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
-  title: "Tomorrow's Media House", 
+  title: "Tomorrows Media House", 
   description: "Profesionalus tinklapių kūrimas ir SEO paslaugos, Shopify el. parduotuvių kūrimas, priežiūra ir optimizavimas. Patikimas Shopify partneris verslui.",
   icons: {
     icon: '/favicon.ico',
