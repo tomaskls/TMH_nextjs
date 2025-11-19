@@ -14,8 +14,8 @@ export function Hero() {
   const portfolioLinks = [
     { title: 'Vetprekes.lt', url: 'https://www.vetprekes.lt' },
     { title: 'Laimingos Rankos', url: 'https://www.laimingosrankos.lt/' },
-    { title: 'PureCommerce pasword-tmh', url: 'purecommerce2.myshopify.com' },
-    // { title: 'Projektas 3', url: 'https://www.example.com/project3' },
+    { title: 'EPardavėjas', url: 'https://epardavejas.lt/' },
+    { title: 'Auto Dalys', url: 'https://odalys.lt' },
     // { title: 'Projektas 4', url: 'https://www.example.com/project4' },
   ];
 
