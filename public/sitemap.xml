@@ -5,6 +5,7 @@
     <!-- Pagrindinis puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en"/>
         <lastmod>2024-01-03</lastmod>
@@ -15,6 +16,7 @@
     <!-- Pagrindinis puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en"/>
         <lastmod>2024-01-03</lastmod>
@@ -25,6 +27,7 @@
     <!-- SEO puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/seo</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/seo"/>
         <lastmod>2024-01-03</lastmod>
@@ -35,6 +38,7 @@
     <!-- SEO puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/seo</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/seo"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/seo"/>
         <lastmod>2024-01-03</lastmod>
@@ -45,6 +49,7 @@
     <!-- Reklamos puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/adds</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/adds"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/adds"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/adds"/>
         <lastmod>2024-01-03</lastmod>
@@ -55,6 +60,7 @@
     <!-- Reklamos puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/adds</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/adds"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/adds"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/adds"/>
         <lastmod>2024-01-03</lastmod>
@@ -65,6 +71,7 @@
     <!-- E-parduotuvių puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/estores</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/estores"/>
         <lastmod>2024-01-03</lastmod>
@@ -75,6 +82,7 @@
     <!-- E-parduotuvių puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/estores</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/estores"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/estores"/>
         <lastmod>2024-01-03</lastmod>
@@ -85,6 +93,7 @@
     <!-- Blog puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/blog</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/blog"/>
         <lastmod>2024-01-03</lastmod>
@@ -95,6 +104,7 @@
     <!-- Blog puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/blog</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/blog"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/blog"/>
         <lastmod>2024-01-03</lastmod>
@@ -105,6 +115,7 @@
     <!-- Kontaktų puslapis LT -->
     <url>
         <loc>https://www.tmh.lt/lt/contact</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/contact"/>
         <lastmod>2024-01-03</lastmod>
@@ -115,6 +126,7 @@
     <!-- Kontaktų puslapis EN -->
     <url>
         <loc>https://www.tmh.lt/en/contact</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="lt" href="https://www.tmh.lt/lt/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.tmh.lt/en/contact"/>
         <lastmod>2024-01-03</lastmod>

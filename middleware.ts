@@ -5,7 +5,7 @@ import { locales } from './navigation';
 export default createMiddleware({
   locales: locales,
   defaultLocale: 'lt',
-  localePrefix: 'always',
+  localePrefix: 'always', // ← Grąžiname 'always'
 });
 
 export const config = {

@@ -12,14 +12,6 @@ import Footer from '@/components/Footer';
 import { Navbar } from '@/components/navbar';
 import CookieConsent from '@/components/CookieConsent';
 
-export const metadata: Metadata = {
-  title: "Tomorrows Media House", 
-  description: "Profesionalus tinklapių kūrimas ir SEO paslaugos, Shopify el. parduotuvių kūrimas, priežiūra ir optimizavimas. Patikimas Shopify partneris verslui.",
-  icons: {
-    icon: '/favicon.ico',
-  },
-};
-
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
@@ -29,6 +21,31 @@ export const viewport: Viewport = {
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'lt' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const locale = resolvedParams.locale;
+
+  return {
+    title: "Tomorrows Media House",
+    description: "Profesionalus tinklapių kūrimas ir SEO paslaugos, Shopify el. parduotuvių kūrimas, priežiūra ir optimizavimas. Patikimas Shopify partneris verslui.",
+    icons: {
+      icon: '/favicon.ico',
+    },
+    alternates: {
+      canonical: `https://www.tmh.lt/${locale}`,
+      languages: {
+        'x-default': 'https://www.tmh.lt/lt',
+        'lt': 'https://www.tmh.lt/lt',
+        'en': 'https://www.tmh.lt/en',
+      },
+    },
+  };
 }
 
 export default async function LocaleLayout({
