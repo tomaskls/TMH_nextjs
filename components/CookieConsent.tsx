@@ -31,6 +31,7 @@ export default function CookieConsent() {
         const savedSettings = JSON.parse(consentGiven);
 
         setCookieSettings(savedSettings);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         // If there's an error parsing the stored consent, show the banner again
         setShowConsent(true);
