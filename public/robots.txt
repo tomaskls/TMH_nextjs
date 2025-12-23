@@ -1,3 +1,9 @@
+# Leisti visoms paieškos sistemoms
 User-agent: *
-Allow: /
-Sitemap: https://www.tmh.lt/sitemap.xml/
+
+# Neleisti indeksuoti blog puslapių
+Disallow: /lt/blog
+Disallow: /en/blog
+
+# Sitemap vieta
+Sitemap: https://www.tmh.lt/sitemap.xml
