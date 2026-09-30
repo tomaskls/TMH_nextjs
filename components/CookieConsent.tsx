@@ -9,6 +9,32 @@ type CookieSettings = {
   marketing: boolean;
 };
 
+const STORAGE_KEY = 'cookieConsent';
+
+// Įvykis, kuriuo slapukų nustatymus galima atidaryti iš bet kurios vietos (pvz. poraštės)
+export const OPEN_COOKIE_SETTINGS_EVENT = 'open-cookie-settings';
+
+const readStoredSettings = (): CookieSettings | null => {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+
+    return stored ? (JSON.parse(stored) as CookieSettings) : null;
+  } catch {
+    return null;
+  }
+};
+
+const applyConsent = (settings: CookieSettings) => {
+  const ad = settings.marketing ? 'granted' : 'denied';
+
+  window.gtag?.('consent', 'update', {
+    analytics_storage: settings.analytics ? 'granted' : 'denied',
+    ad_storage: ad,
+    ad_user_data: ad,
+    ad_personalization: ad,
+  });
+};
+
 export default function CookieConsent() {
   const t = useTranslations('cookies');
   const [showConsent, setShowConsent] = useState(false);
@@ -20,110 +46,73 @@ export default function CookieConsent() {
   });
 
   useEffect(() => {
-    // Check if user has already provided consent
-    const consentGiven = localStorage.getItem('cookieConsent');
-    
-    if (!consentGiven) {
-      setShowConsent(true);
+    // Išsaugotas sutikimas pritaikomas jau layout'o consent skripte,
+    // čia tik užpildome nustatymų formą arba parodome juostą.
+    const saved = readStoredSettings();
+
+    if (saved) {
+      setCookieSettings({ ...saved, essential: true });
     } else {
-      // If consent was already given, load saved preferences
-      try {
-        const savedSettings = JSON.parse(consentGiven);
-
-        setCookieSettings(savedSettings);
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      } catch (error) {
-        // If there's an error parsing the stored consent, show the banner again
-        setShowConsent(true);
-      }
+      setShowConsent(true);
     }
-  }, []);
 
-  const acceptAll = () => {
-    const settings = {
-      essential: true,
-      analytics: true,
-      marketing: true,
+    const openSettings = () => {
+      setShowConsent(true);
+      setShowSettings(true);
     };
 
-    saveConsent(settings);
-  };
+    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, openSettings);
+
+    return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, openSettings);
+  }, []);
 
   const saveConsent = (settings: CookieSettings) => {
-    localStorage.setItem('cookieConsent', JSON.stringify(settings));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+    } catch {
+      // Naršyklė neleidžia saugoti – sutikimas galios tik šiam apsilankymui
+    }
     setCookieSettings(settings);
     setShowConsent(false);
     setShowSettings(false);
-    
-    // Apply analytics based on user consent
-    if (settings.analytics) {
-      // Enable Google Analytics
-      window.gtag?.('consent', 'update', {
-        analytics_storage: 'granted',
-      });
-    } else {
-      // Disable Google Analytics
-      window.gtag?.('consent', 'update', {
-        analytics_storage: 'denied',
-      });
-    }
-    
-    // Apply marketing cookies consent
-    if (settings.marketing) {
-      window.gtag?.('consent', 'update', {
-        ad_storage: 'granted',
-      });
-    } else {
-      window.gtag?.('consent', 'update', {
-        ad_storage: 'denied',
-      });
-    }
+    applyConsent(settings);
   };
 
-  const saveCustomSettings = () => {
-    saveConsent(cookieSettings);
-  };
-
-  const handleSettingChange = (key: keyof CookieSettings) => {
+  const handleSettingChange = (key: keyof CookieSettings, value: boolean) => {
     if (key === 'essential') return; // Can't toggle essential cookies
-    
-    setCookieSettings((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
 
-  // Nenaudojamos funkcijos pašalintos
+    setCookieSettings((prev) => ({ ...prev, [key]: value }));
+  };
 
   if (!showConsent) {
-    // Nesukuriame jokio mygtuko, kai vartotojas jau davė sutikimą
     return null;
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-md border-t border-divider shadow-lg">
+    <div
+      aria-label={t('cookieConsentTitle')}
+      className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-md border-t border-divider shadow-lg"
+      role="dialog"
+    >
       <div className="container mx-auto max-w-7xl">
         {showSettings ? (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">{t('cookieSettings')}</h3>
-            
+
             <div className="space-y-3">
               <div className="flex items-start gap-2">
-                <Checkbox 
-                  isDisabled={true} 
-                  isSelected={cookieSettings.essential}
-                >
+                <Checkbox isDisabled isSelected={cookieSettings.essential}>
                   {t('essentialCookies')}
                 </Checkbox>
                 <Tooltip content={t('essentialCookiesInfo')}>
                   <span className="cursor-help text-xs bg-default-100 px-1 rounded-full">?</span>
                 </Tooltip>
               </div>
-              
+
               <div className="flex items-start gap-2">
-                <Checkbox 
-                  isSelected={cookieSettings.analytics} 
-                  onChange={() => handleSettingChange('analytics')}
+                <Checkbox
+                  isSelected={cookieSettings.analytics}
+                  onValueChange={(v) => handleSettingChange('analytics', v)}
                 >
                   {t('analyticsCookies')}
                 </Checkbox>
@@ -131,11 +120,11 @@ export default function CookieConsent() {
                   <span className="cursor-help text-xs bg-default-100 px-1 rounded-full">?</span>
                 </Tooltip>
               </div>
-              
+
               <div className="flex items-start gap-2">
-                <Checkbox 
-                  isSelected={cookieSettings.marketing} 
-                  onChange={() => handleSettingChange('marketing')}
+                <Checkbox
+                  isSelected={cookieSettings.marketing}
+                  onValueChange={(v) => handleSettingChange('marketing', v)}
                 >
                   {t('marketingCookies')}
                 </Checkbox>
@@ -144,9 +133,9 @@ export default function CookieConsent() {
                 </Tooltip>
               </div>
             </div>
-            
+
             <div className="flex flex-wrap gap-2 mt-4">
-              <Button color="primary" onPress={saveCustomSettings}>
+              <Button color="primary" onPress={() => saveConsent(cookieSettings)}>
                 {t('savePreferences')}
               </Button>
               <Button variant="flat" onPress={() => setShowSettings(false)}>
@@ -161,8 +150,11 @@ export default function CookieConsent() {
               <p className="mt-1 text-default-500 max-w-2xl">{t('cookieConsentText')}</p>
             </div>
             <div className="flex flex-wrap gap-2">
-              <Button color="primary" onPress={acceptAll}>
+              <Button color="primary" onPress={() => saveConsent({ essential: true, analytics: true, marketing: true })}>
                 {t('acceptAll')}
+              </Button>
+              <Button variant="flat" onPress={() => setShowSettings(true)}>
+                {t('customizeSettings')}
               </Button>
               <Button variant="light" onPress={() => saveConsent({ essential: true, analytics: false, marketing: false })}>
                 {t('essentialOnly')}

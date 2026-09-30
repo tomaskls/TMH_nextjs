@@ -10,6 +10,9 @@ import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 
 export default [
   {
+    ignores: ['.next/**', 'node_modules/**', 'out/**', 'build/**', 'next-env.d.ts'],
+  },
+  {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
     plugins: {
       react: reactPlugin,

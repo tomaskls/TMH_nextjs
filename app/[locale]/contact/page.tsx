@@ -19,6 +19,10 @@ import {
   Divider,
 } from '@nextui-org/react';
 
+import { CONTACT_INFO as contactInfo } from '@/config/site';
+
+// FormSubmit JS (fetch) užklausoms turi atskirą /ajax/ adresą, kuris grąžina JSON
+const formAction = `https://formsubmit.co/ajax/${contactInfo.email}`;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,35 +31,28 @@ export default function ContactForm() {
 
   const t = useTranslations('contact');
 
-  const contactInfo = {
-    email: 'info@tmh.lt',
-    phone: '+37060574525',
-    facebook: 'https://facebook.com/tomorrowsmediahouse',
-    instagram: 'https://instagram.com/tomorrowsmediahouse',
-  };
-
-  const formAction = `https://formsubmit.co/${contactInfo.email}`;
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+
     setIsSubmitting(true);
     setIsError(false);
 
     try {
-      const formData = new FormData(e.currentTarget);
       const response = await fetch(formAction, {
         method: 'POST',
-        body: formData,
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
       });
+      const result = await response.json().catch(() => null);
 
-      if (response.ok) {
+      if (response.ok && String(result?.success) === 'true') {
         onOpen();
-        (e.target as HTMLFormElement).reset();
+        form.reset();
       } else {
-        throw new Error();
+        throw new Error(result?.message ?? 'Form submit failed');
       }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
+    } catch {
       setIsError(true);
     } finally {
       setIsSubmitting(false);
@@ -149,8 +146,10 @@ export default function ContactForm() {
           </div>
 
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <input name="_honey" style={{ display: 'none' }} type="text" />
+            <input autoComplete="off" name="_honey" style={{ display: 'none' }} tabIndex={-1} type="text" />
             <input name="_captcha" type="hidden" value="false" />
+            <input name="_subject" type="hidden" value={t('subject')} />
+            <input name="_template" type="hidden" value="table" />
 
             <Input
               isRequired

@@ -4,13 +4,13 @@
     "about": "Apie",
     "websites": "Svetainės",
     "seo": "SEO",
-    "adds": "Reklama",
     "e-stores": "E-parduotuvės",
     "blog": "Blogas",
     "contact": "Susisiekite",
-    "company": "Tomorow's media house"
+    "company": "Tomorrow's Media House",
+    "ads": "Reklama"
   },
- "cookies": {
+  "cookies": {
     "cookieConsentTitle": "Ši svetainė naudoja slapukus",
     "cookieConsentText": "Naudojame slapukus, kad pagerintume jūsų naršymo patirtį, analizuotume svetainės srautą ir personalizuotume turinį. Spustelėdami \"Priimti visus\", sutinkate su mūsų slapukų naudojimu.",
     "acceptAll": "Priimti visus",
@@ -48,17 +48,19 @@
       "email": "jusu@pastas.lt",
       "phone": "+370...",
       "message": "Jūsų žinutė..."
-    }
+    },
+    "subject": "Nauja užklausa iš tmh.lt"
   },
-
   "hero": {
     "badge": "Shopify Ekspertai",
     "title": "Jūsų sėkminga e-parduotuvė prasideda čia",
-    "description": "Nekuriame 'gražių' parduotuvių. Kuriame parduodančias.Dizainas gražu, bet svarbiausia - kad klientas nupirktų. Greitas puslapis, aiškūs mygtukai, sutvarkytas SEO.",
+    "description": "Nekuriame 'gražių' parduotuvių. Kuriame parduodančias. Dizainas gražu, bet svarbiausia - kad klientas nupirktų. Greitas puslapis, aiškūs mygtukai, sutvarkytas SEO.",
     "buttons": {
       "proposal": "Gauti pasiūlymą",
       "portfolio": "Peržiūrėti darbus"
-    }
+    },
+    "portfolioTitle": "Portfolio projektai",
+    "imageAlt": "Vetprekes.lt el. parduotuvė, sukurta Shopify platformoje"
   },
   "services": {
     "title": "Visapusiški sprendimai jūsų e-verslui",
@@ -97,7 +99,6 @@
     "description": "Susisiekite ir gaukite nemokamą konsultaciją",
     "button": "Susisiekti dabar"
   },
-
   "SEOPage": {
     "hero": {
       "title": "LLMO ir SEO sprendimai",
@@ -113,11 +114,26 @@
           "icon": "settings",
           "description": "Techniniai svetainės patobulinimai geresniems rezultatams",
           "items": [
-            { "title": "Svetainės greičio optimizavimas", "icon": "globe" },
-            { "title": "Mobiliosios versijos optimizavimas", "icon": "smartphone" },
-            { "title": "Svetainės struktūros gerinimas", "icon": "fileCode" },
-            { "title": "XML sitemap sukūrimas", "icon": "fileText" },
-            { "title": "Robots.txt konfigūravimas", "icon": "bot" }
+            {
+              "title": "Svetainės greičio optimizavimas",
+              "icon": "globe"
+            },
+            {
+              "title": "Mobiliosios versijos optimizavimas",
+              "icon": "smartphone"
+            },
+            {
+              "title": "Svetainės struktūros gerinimas",
+              "icon": "fileCode"
+            },
+            {
+              "title": "XML sitemap sukūrimas",
+              "icon": "fileText"
+            },
+            {
+              "title": "Robots.txt konfigūravimas",
+              "icon": "bot"
+            }
           ]
         },
         {
@@ -125,11 +141,26 @@
           "icon": "pen",
           "description": "Efektyvus turinio optimizavimas ir kūrimas",
           "items": [
-            { "title": "Raktažodžių tyrimas ir analizė", "icon": "key" },
-            { "title": "Turinio kūrimas ir optimizavimas", "icon": "fileText" },
-            { "title": "Meta aprašymų rašymas", "icon": "pen" },
-            { "title": "URL struktūros optimizavimas", "icon": "link" },
-            { "title": "Paveikslėlių optimizavimas", "icon": "image" }
+            {
+              "title": "Raktažodžių tyrimas ir analizė",
+              "icon": "key"
+            },
+            {
+              "title": "Turinio kūrimas ir optimizavimas",
+              "icon": "fileText"
+            },
+            {
+              "title": "Meta aprašymų rašymas",
+              "icon": "pen"
+            },
+            {
+              "title": "URL struktūros optimizavimas",
+              "icon": "link"
+            },
+            {
+              "title": "Paveikslėlių optimizavimas",
+              "icon": "image"
+            }
           ]
         },
         {
@@ -137,11 +168,26 @@
           "icon": "share",
           "description": "Išorinių faktorių optimizavimas",
           "items": [
-            { "title": "Nuorodų strategijos kūrimas", "icon": "link" },
-            { "title": "Kokybišku backlinks gavimas", "icon": "share" },
-            { "title": "Socialinių tinklų optimizacija", "icon": "globe" },
-            { "title": "Google My Business tvarkymas", "icon": "mapPin" },
-            { "title": "Lokalios SEO strategijos", "icon": "mapPin" }
+            {
+              "title": "Nuorodų strategijos kūrimas",
+              "icon": "link"
+            },
+            {
+              "title": "Kokybiškų backlinks gavimas",
+              "icon": "share"
+            },
+            {
+              "title": "Socialinių tinklų optimizacija",
+              "icon": "globe"
+            },
+            {
+              "title": "Google My Business tvarkymas",
+              "icon": "mapPin"
+            },
+            {
+              "title": "Lokalios SEO strategijos",
+              "icon": "mapPin"
+            }
           ]
         },
         {
@@ -149,11 +195,26 @@
           "icon": "barChart",
           "description": "Nuolatinis rezultatų sekimas ir analizė",
           "items": [
-            { "title": "Google Analytics įdiegimas", "icon": "lineChart" },
-            { "title": "Google Search Console naudojimas", "icon": "search" },
-            { "title": "Pozicijų stebėjimas", "icon": "trendingUp" },
-            { "title": "Konkurentų analizė", "icon": "barChart" },
-            { "title": "Reguliarios ataskaitos", "icon": "fileText" }
+            {
+              "title": "Google Analytics įdiegimas",
+              "icon": "lineChart"
+            },
+            {
+              "title": "Google Search Console naudojimas",
+              "icon": "search"
+            },
+            {
+              "title": "Pozicijų stebėjimas",
+              "icon": "trendingUp"
+            },
+            {
+              "title": "Konkurentų analizė",
+              "icon": "barChart"
+            },
+            {
+              "title": "Reguliarios ataskaitos",
+              "icon": "fileText"
+            }
           ]
         }
       ]
@@ -161,9 +222,18 @@
     "results": {
       "title": "Kodėl verta investuoti į SEO?",
       "stats": [
-        { "value": "+82%", "label": "Organinė paieška" },
-        { "value": "+65%", "label": "Konversijos" },
-        { "value": "+93%", "label": "Pozicijos Google" }
+        {
+          "value": "+82%",
+          "label": "Organinė paieška"
+        },
+        {
+          "value": "+65%",
+          "label": "Konversijos"
+        },
+        {
+          "value": "+93%",
+          "label": "Pozicijos Google"
+        }
       ],
       "learnMore": "Sužinoti daugiau"
     },
@@ -173,136 +243,214 @@
       "storiesButton": "Peržiūrėti sėkmės istorijas"
     }
   },
-  
-    "webDevelopment": {
-      "hero": {
-        "title": "Svetainių\nKūrimas",
-        "description": "Kuriame išskirtinius ir inovatyvius skaitmeninius sprendimus, kurie atrodo moderniai, patogūs naudoti ir padeda jūsų verslui augti.",
-        "startButton": "Pradėkime projektą"
+  "webDevelopment": {
+    "hero": {
+      "title": "Svetainių\nKūrimas",
+      "description": "Kuriame išskirtinius ir inovatyvius skaitmeninius sprendimus, kurie atrodo moderniai, patogūs naudoti ir padeda jūsų verslui augti.",
+      "startButton": "Pradėkime projektą"
+    },
+    "services": {
+      "title": "Mūsų\nPaslaugos",
+      "description": "Naudojame naujausias technologijas ir inovatyvius sprendimus, kad sukurtume jūsų verslui optimalų skaitmeninį sprendimą.",
+      "seo": {
+        "title": "SEO ir AI optimizacija",
+        "description": "Aukštos pozicijos paieškos sistemose ir AI platformose"
       },
-      "services": {
-        "title": "Mūsų\nPaslaugos",
-        "description": "Naudojame naujausias technologijas ir inovatyvius sprendimus, kad sukurtume jūsų verslui optimalų skaitmeninį sprendimą.",
-        "seo": {
-          "title": "SEO ir AI optimizacija",
-          "description": "Aukštos pozicijas paieškos sistemose ir AI platformose"
-        },
-        "design": {
-          "title": "UX/UI Dizainas",
-          "description": "Modernus dizainas su puikia vartotojo patirtimi ir intuityvia navigacija"
-        },
-        "mobile": {
-          "title": "Mobili versija",
-          "description": "Tobulas veikimas visuose įrenginiuose ir ekranų dydžiuose"
-        }
+      "design": {
+        "title": "UX/UI Dizainas",
+        "description": "Modernus dizainas su puikia vartotojo patirtimi ir intuityvia navigacija"
       },
-      "portfolio": {
-        "title": "Mūsų\nPortfolio",
-        "description": "Kiekvienas projektas - unikalus sprendimas, atspindintis kliento poreikius ir mūsų ekspertizę.",
-        "projects": {
-          "ecommerce": "Siuvimo Studija",
-          "travel": "Oro Uosto Taksi",
-          "medical": "Privatus Šefas",
-          "construction": "U2 Autoservisas"
-        }
-      },
-      "techStack": {
-        "title": "Technologijos"
+      "mobile": {
+        "title": "Mobili versija",
+        "description": "Tobulas veikimas visuose įrenginiuose ir ekranų dydžiuose"
       }
     },
-    
-      "ads": {
-        "title": "Skaitmeninės Reklamos Paslaugos",
-        "subtitle": "Profesionalios Google Ads ir Meta Ads reklamos paslaugos, padėsiančios pasiekti jūsų verslo tikslus",
-        "services": {
-          "google": {
-            "title": "Google Ads",
-            "description": "Optimizuotos reklamos Google paieškos sistemoje ir partnerių tinkle",
-            "features": {
-              "search": {
-                "title": "Paieškos reklamos",
-                "items": [
-                  "Raktažodžių tyrimai ir optimizavimas",
-                  "Reklaminio teksto kūrimas ir A/B testavimas",
-                  "Kainos už paspaudimą (CPC) optimizavimas",
-                  "Konversijų sekimas ir ROI analizė"
-                ]
-              },
-              "display": {
-                "title": "Display reklamos",
-                "items": [
-                  "Vaizdinių reklamos maketų kūrimas",
-                  "Auditorijos segmentavimas",
-                  "Retargeting nustatymai",
-                  "Reklamos pozicijų optimizavimas"
-                ]
-              },
-              "campaign": {
-                "title": "Kampanijų valdymas",
-                "items": [
-                  "Reklamos grupių organizavimas",
-                  "Kampanijų strategijos nustatymas",
-                  "Biudžeto paskirstymas",
-                  "Google Analytics integracija"
-                ]
-              },
-              "shopping": {
-                "title": "Shopping kampanijos",
-                "items": [
-                  "Produktų feed optimizavimas",
-                  "Produktų grupių struktūros kūrimas",
-                  "Smart Shopping kampanijų valdymas",
-                  "Kryžminio pardavimo strategijos"
-                ]
-              }
-            }
+    "portfolio": {
+      "title": "Mūsų\nPortfolio",
+      "description": "Kiekvienas projektas - unikalus sprendimas, atspindintis kliento poreikius ir mūsų ekspertizę.",
+      "projects": {
+        "ecommerce": "Siuvimo Studija",
+        "travel": "Oro Uosto Taksi",
+        "medical": "Privatus Šefas",
+        "construction": "U2 Autoservisas"
+      },
+      "liveDemo": "Peržiūrėti"
+    },
+    "techStack": {
+      "title": "Technologijos"
+    }
+  },
+  "ads": {
+    "title": "Skaitmeninės Reklamos Paslaugos",
+    "subtitle": "Profesionalios Google Ads ir Meta Ads reklamos paslaugos, padėsiančios pasiekti jūsų verslo tikslus",
+    "services": {
+      "google": {
+        "title": "Google Ads",
+        "description": "Optimizuotos reklamos Google paieškos sistemoje ir partnerių tinkle",
+        "features": {
+          "search": {
+            "title": "Paieškos reklamos",
+            "items": [
+              "Raktažodžių tyrimai ir optimizavimas",
+              "Reklaminio teksto kūrimas ir A/B testavimas",
+              "Kainos už paspaudimą (CPC) optimizavimas",
+              "Konversijų sekimas ir ROI analizė"
+            ]
           },
-          "meta": {
-            "title": "Meta Ads",
-            "description": "Efektyvios reklamos Facebook ir Instagram platformose",
-            "features": {
-              "feed": {
-                "title": "Feed reklamos",
-                "items": [
-                  "Reklaminio turinio kūrimas",
-                  "Vaizdo ir teksto formatai",
-                  "Karuselių reklamos",
-                  "Stories reklamos"
-                ]
-              },
-              "audience": {
-                "title": "Auditorijų valdymas",
-                "items": [
-                  "Interests-based targetavimas",
-                  "Custom auditorijos kūrimas",
-                  "Lookalike auditorijos",
-                  "Retargeting auditorijos"
-                ]
-              },
-              "optimization": {
-                "title": "Kampanijų optimizavimas",
-                "items": [
-                  "Biudžeto planavimas",
-                  "Delivery optimizavimas",
-                  "A/B testavimas",
-                  "Kainos optimizavimas (CPC, CPM)"
-                ]
-              },
-              "tracking": {
-                "title": "Tracking ir analitika",
-                "items": [
-                  "Meta Pixel įdiegimas",
-                  "Konversijų sekimas",
-                  "Events konfigūracija",
-                  "CAPI integracija"
-                ]
-              }
-            }
+          "display": {
+            "title": "Display reklamos",
+            "items": [
+              "Vaizdinių reklamos maketų kūrimas",
+              "Auditorijos segmentavimas",
+              "Retargeting nustatymai",
+              "Reklamos pozicijų optimizavimas"
+            ]
+          },
+          "campaign": {
+            "title": "Kampanijų valdymas",
+            "items": [
+              "Reklamos grupių organizavimas",
+              "Kampanijų strategijos nustatymas",
+              "Biudžeto paskirstymas",
+              "Google Analytics integracija"
+            ]
+          },
+          "shopping": {
+            "title": "Shopping kampanijos",
+            "items": [
+              "Produktų feed optimizavimas",
+              "Produktų grupių struktūros kūrimas",
+              "Smart Shopping kampanijų valdymas",
+              "Kryžminio pardavimo strategijos"
+            ]
+          }
+        }
+      },
+      "meta": {
+        "title": "Meta Ads",
+        "description": "Efektyvios reklamos Facebook ir Instagram platformose",
+        "features": {
+          "feed": {
+            "title": "Feed reklamos",
+            "items": [
+              "Reklaminio turinio kūrimas",
+              "Vaizdo ir teksto formatai",
+              "Karuselių reklamos",
+              "Stories reklamos"
+            ]
+          },
+          "audience": {
+            "title": "Auditorijų valdymas",
+            "items": [
+              "Interests-based targetavimas",
+              "Custom auditorijos kūrimas",
+              "Lookalike auditorijos",
+              "Retargeting auditorijos"
+            ]
+          },
+          "optimization": {
+            "title": "Kampanijų optimizavimas",
+            "items": [
+              "Biudžeto planavimas",
+              "Delivery optimizavimas",
+              "A/B testavimas",
+              "Kainos optimizavimas (CPC, CPM)"
+            ]
+          },
+          "tracking": {
+            "title": "Tracking ir analitika",
+            "items": [
+              "Meta Pixel įdiegimas",
+              "Konversijų sekimas",
+              "Events konfigūracija",
+              "CAPI integracija"
+            ]
           }
         }
       }
     }
-      
-    
-  
-
+  },
+  "footer": {
+    "rights": "Visos teisės saugomos.",
+    "manageCookies": "Slapukų nustatymai"
+  },
+  "error": {
+    "title": "Kažkas nepavyko",
+    "retry": "Bandyti dar kartą"
+  },
+  "notFound": {
+    "title": "Puslapis nerastas",
+    "description": "Tokio puslapio nėra arba jis buvo perkeltas.",
+    "backHome": "Grįžti į pradžią"
+  },
+  "metadata": {
+    "siteName": "Tomorrow's Media House",
+    "home": {
+      "title": "Svetainių kūrimas, SEO ir Shopify parduotuvės",
+      "description": "Profesionalus tinklapių kūrimas ir SEO paslaugos, Shopify el. parduotuvių kūrimas, priežiūra ir optimizavimas. Patikimas skaitmeninis partneris verslui."
+    },
+    "seo": {
+      "title": "SEO ir LLMO paslaugos",
+      "description": "Profesionalios SEO paslaugos verslui, kurios užtikrina aukščiausias pozicijas Google ir AI paieškoje. Auditas, raktažodžių analizė, optimizavimas ir rezultatų stebėsena."
+    },
+    "ads": {
+      "title": "Google Ads ir Meta Ads reklama",
+      "description": "Google Ads ir Meta (Facebook, Instagram) reklamos kampanijų kūrimas, valdymas ir optimizavimas, orientuotas į pardavimus ir grąžą."
+    },
+    "estores": {
+      "title": "Shopify el. parduotuvių kūrimas",
+      "description": "Shopify el. parduotuvių kūrimas, dizainas ir techninė priežiūra. Kuriame ne tik gražias, bet ir parduodančias parduotuves."
+    },
+    "contact": {
+      "title": "Kontaktai",
+      "description": "Susisiekite su Tomorrow's Media House telefonu, el. paštu, WhatsApp arba užpildykite užklausos formą."
+    },
+    "blog": {
+      "title": "Kodėl verta rinktis mus",
+      "description": "Modernios, greitos ir SEO optimizuotos svetainės verslui."
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Paverskite savo idėjas į išskirtinę internetinę svetainę",
+      "description": "Kuriame modernius ir efektyvius skaitmeninius sprendimus, kurie padeda verslams augti. Per pirmus metus mūsų sukurtos svetainės vidutiniškai padidino klientų konversijas 40%.",
+      "button": "Sužinoti daugiau"
+    },
+    "featuresTitle": "Ką gausite pasirinkę mus?",
+    "features": {
+      "speed": {
+        "title": "Greitis ir efektyvumas",
+        "description": "Naudojame Next.js ir React, užtikrinančius puikų svetainės greitį. Mūsų svetainių įkėlimo laikas - vidutiniškai 1.2 sekundės."
+      },
+      "seo": {
+        "title": "Geresni SEO rezultatai",
+        "description": "Mūsų optimizuotos svetainės pasiekia TOP10 Google rezultatuose per pirmus 3-6 mėnesius."
+      },
+      "quality": {
+        "title": "Garantuota kokybė",
+        "description": "90 dienų garantija kodui ir dizainui. Operatyvus klaidų taisymas ir atnaujinimai be papildomų mokesčių."
+      },
+      "service": {
+        "title": "Visapusis aptarnavimas",
+        "description": "Nuo dizaino iki SEO - viską rasite vienoje vietoje. 95% klientų lieka su mumis ilgiau nei metus."
+      },
+      "process": {
+        "title": "Skaidrus procesas",
+        "description": "Kas savaitę gaunate progreso ataskaitas ir turite prieigą prie projekto valdymo įrankių."
+      },
+      "payment": {
+        "title": "Lankstus mokėjimas",
+        "description": "Mokėkite dalimis be papildomų mokesčių. Pirmas mokėjimas - tik 30% projekto vertės."
+      },
+      "hosting": {
+        "title": "Metai be rūpesčių",
+        "description": "12 mėn. nemokamas talpinimas, SSL sertifikatas ir techninis palaikymas - $500 vertės paslauga nemokamai."
+      }
+    },
+    "cta": {
+      "title": "Gaukite nemokamą projekto įvertinimą",
+      "description": "Per 24 valandas paruošime detalų pasiūlymą su preliminariu biudžetu ir terminais. Jokių įsipareigojimų.",
+      "button": "Gauti pasiūlymą"
+    }
+  }
+}

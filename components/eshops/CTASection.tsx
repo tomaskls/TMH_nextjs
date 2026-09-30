@@ -1,6 +1,9 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Card, CardBody, Button } from '@nextui-org/react';
-import { Link } from '@nextui-org/link';
+
+import { Link } from '@/navigation';
 
 export function CTASection() {
   const t = useTranslations('cta');

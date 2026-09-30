@@ -1,6 +1,5 @@
 import React from 'react';
 import '@/styles/globals.css';
-// import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 export default function RootLayout({

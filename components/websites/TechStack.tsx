@@ -1,4 +1,4 @@
-// /components/web-development/TechStack.tsx
+import Image from 'next/image';
 
 interface TechStackProps {
   title: string;
@@ -50,10 +50,12 @@ export const TechStack = ({ title }: TechStackProps) => {
               key={index}
               className="p-8 bg-white dark:bg-transparent border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-fuchsia-600 transition-all duration-300 flex flex-col items-center"
             >
-              <img 
+              <Image
                 alt={`${tech.name} icon`}
-                className="w-8 h-8 mb-4"
+                className="w-8 h-8 mb-4 object-contain"
+                height={32}
                 src={tech.iconPath}
+                width={32}
               />
               <span className="text-xl font-mono">{tech.name}</span>
             </div>

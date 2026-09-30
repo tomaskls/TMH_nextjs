@@ -1,7 +1,11 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Button, Modal, ModalContent, ModalHeader, ModalBody, Link } from '@nextui-org/react';
 import Image from 'next/image';
 import { useState } from 'react';
+
+import { Link as LocaleLink } from '@/navigation';
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -17,7 +21,6 @@ export function Hero() {
     { title: 'Andromeda kristalai', url: 'https://andromedakristalai.lt/' },
     { title: 'EPardavėjas', url: 'https://epardavejas.lt/' },
     { title: 'Auto Dalys', url: 'https://odalys.lt' },
-    // { title: 'Projektas 4', url: 'https://www.example.com/project4' },
   ];
 
   return (
@@ -35,7 +38,7 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Button
-            as={Link}
+            as={LocaleLink}
               className="w-full sm:w-auto font-semibold bg-[#526752] dark:bg-[#8fa88f] text-white"
               href='/contact'
               size="lg"
@@ -58,7 +61,7 @@ export function Hero() {
             <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden">
               <Image
                 priority
-                alt="Hero image"
+                alt={t('imageAlt')}
                 className="w-full h-auto"
                 height={400}
                 src="/projects/vetprekes.png"
@@ -72,12 +75,12 @@ export function Hero() {
       {/* Portfolio nuorodų modalinis langas */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <ModalContent>
-          <ModalHeader className="text-[#526752] dark:text-[#8fa88f]">Portfolio projektai</ModalHeader>
+          <ModalHeader className="text-[#526752] dark:text-[#8fa88f]">{t('portfolioTitle')}</ModalHeader>
           <ModalBody className="pb-6">
             <div className="grid gap-4">
-              {portfolioLinks.map((link, index) => (
+              {portfolioLinks.map((link) => (
                 <Link 
-                  key={index} 
+                  key={link.url}
                   className="text-[#526752] dark:text-[#8fa88f] hover:underline p-2 border border-[#e5ede5] dark:border-[#2a332a] rounded-lg"
                   href={link.url}
                   rel="noopener noreferrer"

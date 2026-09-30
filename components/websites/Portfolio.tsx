@@ -1,4 +1,5 @@
-// /components/web-development/Portfolio.tsx
+import Image from 'next/image';
+
 import { Card } from './Card';
 
 interface Project {
@@ -10,10 +11,11 @@ interface Project {
 interface PortfolioProps {
   title: string;
   description: string;
+  liveDemoText: string;
   projects: Project[];
 }
 
-export const Portfolio = ({ title, description, projects }: PortfolioProps) => {
+export const Portfolio = ({ title, description, liveDemoText, projects }: PortfolioProps) => {
   return (
     <div className="py-24 px-1 md:px-12 lg:px-24 bg-zinc-50 dark:bg-zinc-900">
       <div className="max-w-6xl mx-auto">
@@ -25,15 +27,17 @@ export const Portfolio = ({ title, description, projects }: PortfolioProps) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <Card 
-              key={index}
+          {projects.map((project) => (
+            <Card
+              key={project.demoUrl}
               noPadding
               className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:border-fuchsia-600 transition-all duration-300 group h-[300px] relative"
             >
-              <img 
-                alt={project.title} 
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+              <Image
+                fill
+                alt={project.title}
+                className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 src={project.image}
               />
               <div className="absolute bottom-0 left-0 right-0 p-1
@@ -45,7 +49,7 @@ export const Portfolio = ({ title, description, projects }: PortfolioProps) => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Live Demo
+                  {liveDemoText}
                 </a>
               </div>
             </Card>

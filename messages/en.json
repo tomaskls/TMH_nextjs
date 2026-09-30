@@ -4,11 +4,11 @@
     "about": "About",
     "websites": "Websites",
     "seo": "SEO",
-    "adds": "Adds",
     "e-stores": "E-stores",
     "blog": "Blog",
     "contact": "Contact us",
-    "company": "Tomorow's media house"
+    "company": "Tomorrow's Media House",
+    "ads": "Ads"
   },
   "cookies": {
     "cookieConsentTitle": "This website uses cookies",
@@ -48,9 +48,9 @@
       "email": "your@email.com",
       "phone": "+370...",
       "message": "Your message..."
-    }
+    },
+    "subject": "New enquiry from tmh.lt"
   },
-
   "hero": {
     "badge": "Shopify Experts",
     "title": "Your successful e-store starts here",
@@ -58,7 +58,9 @@
     "buttons": {
       "proposal": "Get Proposal",
       "portfolio": "View Work"
-    }
+    },
+    "portfolioTitle": "Portfolio projects",
+    "imageAlt": "Vetprekes.lt online store built on Shopify"
   },
   "services": {
     "title": "Comprehensive solutions for your e-business",
@@ -97,7 +99,6 @@
     "description": "Contact us and get a free consultation",
     "button": "Contact Now"
   },
-
   "SEOPage": {
     "hero": {
       "title": "LLMO & SEO Solutions That Grow Your Business",
@@ -113,11 +114,26 @@
           "icon": "settings",
           "description": "Technical website improvements for better results",
           "items": [
-            { "title": "Website Speed Optimization", "icon": "globe" },
-            { "title": "Mobile Version Optimization", "icon": "smartphone" },
-            { "title": "Website Structure Enhancement", "icon": "fileCode" },
-            { "title": "XML Sitemap Creation", "icon": "fileText" },
-            { "title": "Robots.txt Configuration", "icon": "bot" }
+            {
+              "title": "Website Speed Optimization",
+              "icon": "globe"
+            },
+            {
+              "title": "Mobile Version Optimization",
+              "icon": "smartphone"
+            },
+            {
+              "title": "Website Structure Enhancement",
+              "icon": "fileCode"
+            },
+            {
+              "title": "XML Sitemap Creation",
+              "icon": "fileText"
+            },
+            {
+              "title": "Robots.txt Configuration",
+              "icon": "bot"
+            }
           ]
         },
         {
@@ -125,11 +141,26 @@
           "icon": "pen",
           "description": "Efficient content optimization and creation",
           "items": [
-            { "title": "Keyword Research and Analysis", "icon": "key" },
-            { "title": "Content Creation and Optimization", "icon": "fileText" },
-            { "title": "Meta Description Writing", "icon": "pen" },
-            { "title": "URL Structure Optimization", "icon": "link" },
-            { "title": "Image Optimization", "icon": "image" }
+            {
+              "title": "Keyword Research and Analysis",
+              "icon": "key"
+            },
+            {
+              "title": "Content Creation and Optimization",
+              "icon": "fileText"
+            },
+            {
+              "title": "Meta Description Writing",
+              "icon": "pen"
+            },
+            {
+              "title": "URL Structure Optimization",
+              "icon": "link"
+            },
+            {
+              "title": "Image Optimization",
+              "icon": "image"
+            }
           ]
         },
         {
@@ -137,11 +168,26 @@
           "icon": "share",
           "description": "External factors optimization",
           "items": [
-            { "title": "Link Building Strategy", "icon": "link" },
-            { "title": "Quality Backlinks Acquisition", "icon": "share" },
-            { "title": "Social Media Optimization", "icon": "globe" },
-            { "title": "Google My Business Management", "icon": "mapPin" },
-            { "title": "Local SEO Strategies", "icon": "mapPin" }
+            {
+              "title": "Link Building Strategy",
+              "icon": "link"
+            },
+            {
+              "title": "Quality Backlinks Acquisition",
+              "icon": "share"
+            },
+            {
+              "title": "Social Media Optimization",
+              "icon": "globe"
+            },
+            {
+              "title": "Google My Business Management",
+              "icon": "mapPin"
+            },
+            {
+              "title": "Local SEO Strategies",
+              "icon": "mapPin"
+            }
           ]
         },
         {
@@ -149,11 +195,26 @@
           "icon": "barChart",
           "description": "Continuous results tracking and analysis",
           "items": [
-            { "title": "Google Analytics Implementation", "icon": "lineChart" },
-            { "title": "Google Search Console Usage", "icon": "search" },
-            { "title": "Position Tracking", "icon": "trendingUp" },
-            { "title": "Competitor Analysis", "icon": "barChart" },
-            { "title": "Regular Reports", "icon": "fileText" }
+            {
+              "title": "Google Analytics Implementation",
+              "icon": "lineChart"
+            },
+            {
+              "title": "Google Search Console Usage",
+              "icon": "search"
+            },
+            {
+              "title": "Position Tracking",
+              "icon": "trendingUp"
+            },
+            {
+              "title": "Competitor Analysis",
+              "icon": "barChart"
+            },
+            {
+              "title": "Regular Reports",
+              "icon": "fileText"
+            }
           ]
         }
       ]
@@ -161,9 +222,18 @@
     "results": {
       "title": "Why Invest in SEO?",
       "stats": [
-        { "value": "+82%", "label": "Organic Search" },
-        { "value": "+65%", "label": "Conversions" },
-        { "value": "+93%", "label": "Google Rankings" }
+        {
+          "value": "+82%",
+          "label": "Organic Search"
+        },
+        {
+          "value": "+65%",
+          "label": "Conversions"
+        },
+        {
+          "value": "+93%",
+          "label": "Google Rankings"
+        }
       ],
       "learnMore": "Learn More"
     },
@@ -173,135 +243,214 @@
       "storiesButton": "View Success Stories"
     }
   },
-  
-    "webDevelopment": {
-      "hero": {
-        "title": "Website\nDevelopment",
-        "description": "We create exceptional and innovative digital solutions that look modern, are user-friendly, and help your business grow.",
-        "startButton": "Start a Project"
+  "webDevelopment": {
+    "hero": {
+      "title": "Website\nDevelopment",
+      "description": "We create exceptional and innovative digital solutions that look modern, are user-friendly, and help your business grow.",
+      "startButton": "Start a Project"
+    },
+    "services": {
+      "title": "Our\nServices",
+      "description": "We use the latest technologies and innovative solutions to create an optimal digital solution for your business.",
+      "seo": {
+        "title": "SEO and AI Optimization",
+        "description": "High positions in search engines and AI platforms"
       },
-      "services": {
-        "title": "Our\nServices",
-        "description": "We use the latest technologies and innovative solutions to create an optimal digital solution for your business.",
-        "seo": {
-          "title": "SEO and AI Optimization",
-          "description": "High positions in search engines and AI platforms"
-        },
-        "design": {
-          "title": "UX/UI Design",
-          "description": "Modern design with great user experience and intuitive navigation"
-        },
-        "mobile": {
-          "title": "Mobile Version",
-          "description": "Perfect functionality on all devices and screen sizes"
-        }
+      "design": {
+        "title": "UX/UI Design",
+        "description": "Modern design with great user experience and intuitive navigation"
       },
-      "portfolio": {
-        "title": "Our\nPortfolio",
-        "description": "Each project is a unique solution reflecting client needs and our expertise.",
-        "projects": {
-          "ecommerce": "Sewing Studio",
-          "travel": "Airport Taxi Service",
-          "medical": "Privat Chef",
-          "construction": "Car Repair Shop"
-        }
-      },
-      "techStack": {
-        "title": "Technologies"
+      "mobile": {
+        "title": "Mobile Version",
+        "description": "Perfect functionality on all devices and screen sizes"
       }
     },
-  
-    
-      "ads": {
-        "title": "Digital Advertising Services",
-        "subtitle": "Professional Google Ads and Meta Ads services to help achieve your business goals",
-        "services": {
-          "google": {
-            "title": "Google Ads",
-            "description": "Optimized advertising on Google search engine and partner network",
-            "features": {
-              "search": {
-                "title": "Search Advertising",
-                "items": [
-                  "Keyword research and optimization",
-                  "Ad copy creation and A/B testing",
-                  "Cost per click (CPC) optimization",
-                  "Conversion tracking and ROI analysis"
-                ]
-              },
-              "display": {
-                "title": "Display Advertising",
-                "items": [
-                  "Visual ad creative design",
-                  "Audience segmentation",
-                  "Retargeting setup",
-                  "Ad placement optimization"
-                ]
-              },
-              "campaign": {
-                "title": "Campaign Management",
-                "items": [
-                  "Ad group organization",
-                  "Campaign strategy setup",
-                  "Budget allocation",
-                  "Google Analytics integration"
-                ]
-              },
-              "shopping": {
-                "title": "Shopping Campaigns",
-                "items": [
-                  "Product feed optimization",
-                  "Product group structure creation",
-                  "Smart Shopping campaign management",
-                  "Cross-selling strategies"
-                ]
-              }
-            }
+    "portfolio": {
+      "title": "Our\nPortfolio",
+      "description": "Each project is a unique solution reflecting client needs and our expertise.",
+      "projects": {
+        "ecommerce": "Sewing Studio",
+        "travel": "Airport Taxi Service",
+        "medical": "Private Chef",
+        "construction": "Car Repair Shop"
+      },
+      "liveDemo": "Live Demo"
+    },
+    "techStack": {
+      "title": "Technologies"
+    }
+  },
+  "ads": {
+    "title": "Digital Advertising Services",
+    "subtitle": "Professional Google Ads and Meta Ads services to help achieve your business goals",
+    "services": {
+      "google": {
+        "title": "Google Ads",
+        "description": "Optimized advertising on Google search engine and partner network",
+        "features": {
+          "search": {
+            "title": "Search Advertising",
+            "items": [
+              "Keyword research and optimization",
+              "Ad copy creation and A/B testing",
+              "Cost per click (CPC) optimization",
+              "Conversion tracking and ROI analysis"
+            ]
           },
-          "meta": {
-            "title": "Meta Ads",
-            "description": "Effective advertising on Facebook and Instagram platforms",
-            "features": {
-              "feed": {
-                "title": "Feed Ads",
-                "items": [
-                  "Ad content creation",
-                  "Video and text formats",
-                  "Carousel ads",
-                  "Stories ads"
-                ]
-              },
-              "audience": {
-                "title": "Audience Management",
-                "items": [
-                  "Interests-based targeting",
-                  "Custom audience creation",
-                  "Lookalike audiences",
-                  "Retargeting audiences"
-                ]
-              },
-              "optimization": {
-                "title": "Campaign Optimization",
-                "items": [
-                  "Budget planning",
-                  "Delivery optimization",
-                  "A/B testing",
-                  "Price optimization (CPC, CPM)"
-                ]
-              },
-              "tracking": {
-                "title": "Tracking and Analytics",
-                "items": [
-                  "Meta Pixel installation",
-                  "Conversion tracking",
-                  "Events configuration",
-                  "CAPI integration"
-                ]
-              }
-            }
+          "display": {
+            "title": "Display Advertising",
+            "items": [
+              "Visual ad creative design",
+              "Audience segmentation",
+              "Retargeting setup",
+              "Ad placement optimization"
+            ]
+          },
+          "campaign": {
+            "title": "Campaign Management",
+            "items": [
+              "Ad group organization",
+              "Campaign strategy setup",
+              "Budget allocation",
+              "Google Analytics integration"
+            ]
+          },
+          "shopping": {
+            "title": "Shopping Campaigns",
+            "items": [
+              "Product feed optimization",
+              "Product group structure creation",
+              "Smart Shopping campaign management",
+              "Cross-selling strategies"
+            ]
+          }
+        }
+      },
+      "meta": {
+        "title": "Meta Ads",
+        "description": "Effective advertising on Facebook and Instagram platforms",
+        "features": {
+          "feed": {
+            "title": "Feed Ads",
+            "items": [
+              "Ad content creation",
+              "Video and text formats",
+              "Carousel ads",
+              "Stories ads"
+            ]
+          },
+          "audience": {
+            "title": "Audience Management",
+            "items": [
+              "Interests-based targeting",
+              "Custom audience creation",
+              "Lookalike audiences",
+              "Retargeting audiences"
+            ]
+          },
+          "optimization": {
+            "title": "Campaign Optimization",
+            "items": [
+              "Budget planning",
+              "Delivery optimization",
+              "A/B testing",
+              "Price optimization (CPC, CPM)"
+            ]
+          },
+          "tracking": {
+            "title": "Tracking and Analytics",
+            "items": [
+              "Meta Pixel installation",
+              "Conversion tracking",
+              "Events configuration",
+              "CAPI integration"
+            ]
           }
         }
       }
     }
-
-
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "manageCookies": "Cookie settings"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "retry": "Try again"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "backHome": "Back to home"
+  },
+  "metadata": {
+    "siteName": "Tomorrow's Media House",
+    "home": {
+      "title": "Website Development, SEO and Shopify Stores",
+      "description": "Professional website development and SEO services, Shopify e-store development, maintenance and optimisation. A reliable digital partner for your business."
+    },
+    "seo": {
+      "title": "SEO and LLMO Services",
+      "description": "Professional SEO services that help your business rank at the top of Google and AI search. Audits, keyword research, optimisation and performance tracking."
+    },
+    "ads": {
+      "title": "Google Ads and Meta Ads",
+      "description": "Google Ads and Meta (Facebook, Instagram) campaign setup, management and optimisation focused on sales and return on ad spend."
+    },
+    "estores": {
+      "title": "Shopify Store Development",
+      "description": "Shopify store development, design and maintenance. We don't just build beautiful stores - we build stores that sell."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with Tomorrow's Media House by phone, email, WhatsApp or the enquiry form."
+    },
+    "blog": {
+      "title": "Why Choose Us",
+      "description": "Modern, fast and SEO-optimised websites for your business."
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Turn your ideas into an outstanding website",
+      "description": "We build modern and effective digital solutions that help businesses grow. In their first year, websites we built increased client conversions by 40% on average.",
+      "button": "Learn more"
+    },
+    "featuresTitle": "What do you get by choosing us?",
+    "features": {
+      "speed": {
+        "title": "Speed and efficiency",
+        "description": "We use Next.js and React for excellent site speed. Our websites load in 1.2 seconds on average."
+      },
+      "seo": {
+        "title": "Better SEO results",
+        "description": "Our optimised websites reach the Google TOP10 within the first 3-6 months."
+      },
+      "quality": {
+        "title": "Guaranteed quality",
+        "description": "90-day warranty on code and design. Fast bug fixes and updates at no extra cost."
+      },
+      "service": {
+        "title": "Full-service support",
+        "description": "From design to SEO - everything in one place. 95% of clients stay with us for more than a year."
+      },
+      "process": {
+        "title": "Transparent process",
+        "description": "You get weekly progress reports and access to project management tools."
+      },
+      "payment": {
+        "title": "Flexible payment",
+        "description": "Pay in instalments with no extra fees. The first payment is only 30% of the project value."
+      },
+      "hosting": {
+        "title": "A worry-free year",
+        "description": "12 months of free hosting, SSL certificate and technical support - a $500 value, free of charge."
+      }
+    },
+    "cta": {
+      "title": "Get a free project estimate",
+      "description": "Within 24 hours we will prepare a detailed proposal with a preliminary budget and timeline. No obligations.",
+      "button": "Get a proposal"
+    }
+  }
+}

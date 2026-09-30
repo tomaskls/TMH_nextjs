@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl'; // Pridėtas naujas importas
 import React from 'react';
 import {
   Navbar as NextUINavbar,
@@ -13,23 +12,27 @@ import {
   NavbarMenuItem,
 } from '@nextui-org/navbar';
 import { Button } from '@nextui-org/button';
-import { Link } from '@nextui-org/link';
 import { link as linkStyles } from '@nextui-org/theme';
-import NextLink from 'next/link';
 import clsx from 'clsx';
 
 import { LanguageSwitch } from '@/components/language-switch';
 import { ThemeSwitch } from '@/components/theme-switch';
-import { Logo } from '@/components/logo/Logo'
-import { getSiteConfig } from '@/config/site'; // Pakeistas importas
+import { Logo } from '@/components/logo/Logo';
+import { siteConfig } from '@/config/site';
+import { Link, usePathname } from '@/navigation';
+
+const navLinkClass = clsx(
+  linkStyles({ color: 'foreground' }),
+  'data-[active=true]:text-primary data-[active=true]:font-medium'
+);
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const t = useTranslations('navigation');
-  const locale = useLocale(); // Gaunama dabartinė lokalė
-  
-  // Gaunama konfigūracija su teisingais URL pagal lokalę
-  const config = getSiteConfig(locale);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
     <NextUINavbar
@@ -40,32 +43,31 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full justify-start items-center gap-10" >
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink aria-label="Tomorrow's Media House" className="flex justify-start items-center gap-1" href={`/${locale}/`}>
+          <Link aria-label={siteConfig.name} className="flex justify-start items-center gap-1" href="/">
             <Logo aria-hidden="true" className='mt-4' style={{ width: '100px', height: '100px' }} />
             <p className="hidden md:inline font-bold text-inherit text-lg ml-6">
-              <span className='text-fuchsia-500'>Tomo</span>rrow's Media House
+              <span className='text-fuchsia-500'>Tomo</span>rrow&apos;s Media House
             </p>
-          </NextLink>
+          </Link>
         </NavbarBrand>
-        <div className="hidden lg:flex gap-4 justify-start ml-6">
-          {config.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-primary data-[active=true]:font-medium '
-                )}
-                color="foreground"
+        <li className="hidden lg:flex ml-6">
+          <ul className="flex gap-4 justify-start">
+          {siteConfig.navItems.map((item) => (
+            <NavbarItem key={item.href} isActive={isActive(item.href)}>
+              <Link
+                className={navLinkClass}
+                data-active={isActive(item.href)}
                 href={item.href}
               >
                 {t(item.label)}
-              </NextLink>
+              </Link>
             </NavbarItem>
           ))}
-        </div>
+          </ul>
+        </li>
       </NavbarContent>
 
-     <NavbarContent
+      <NavbarContent
         className="hidden lg:flex basis-1/5 sm:basis-full"
         justify="end"
       >
@@ -77,7 +79,7 @@ export const Navbar = () => {
           <Button
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={config.links.contact}
+            href={siteConfig.links.contact}
             variant="flat"
           >
             {t('contact')}
@@ -93,32 +95,18 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {config.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item.label}-${index}`}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-primary data-[active=true]:font-medium'
-                )}
+          {[...siteConfig.navItems, { label: 'contact', href: siteConfig.links.contact }].map((item) => (
+            <NavbarMenuItem key={item.href} isActive={isActive(item.href)}>
+              <Link
+                className={navLinkClass}
+                data-active={isActive(item.href)}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t(item.label)}
-              </NextLink>
+              </Link>
             </NavbarMenuItem>
           ))}
-          <NavbarMenuItem>
-            <NextLink
-              className={clsx(
-                linkStyles({ color: 'foreground' }),
-                'data-[active=true]:text-primary data-[active=true]:font-medium'
-              )}
-              href={config.links.contact}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('contact')}
-            </NextLink>
-          </NavbarMenuItem>
         </div>
       </NavbarMenu>
     </NextUINavbar>

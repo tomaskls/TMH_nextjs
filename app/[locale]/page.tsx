@@ -1,12 +1,25 @@
-// /app/[locale]/web-development/page.tsx
-import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { Hero } from '@/components/websites/Hero';
 import { Services } from '@/components/websites/Services';
 import { Portfolio } from '@/components/websites/Portfolio';
 import { TechStack } from '@/components/websites/TechStack';
+import { buildMetadata } from '@/config/metadata';
 
-export default async function WebDevelopmentPage() {
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  return buildMetadata(locale, 'home', '');
+}
+
+export default async function WebDevelopmentPage({ params }: Props) {
+  const { locale } = await params;
+
+  setRequestLocale(locale);
   const t = await getTranslations('webDevelopment');
 
   const services = [
@@ -64,6 +77,7 @@ export default async function WebDevelopmentPage() {
       />
       <Portfolio 
         description={t('portfolio.description')}
+        liveDemoText={t('portfolio.liveDemo')}
         projects={projects}
         title={t('portfolio.title')}
       />

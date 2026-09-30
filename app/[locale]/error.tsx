@@ -1,14 +1,18 @@
 'use client';
 import React from 'react';
 import { useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+import { Button } from '@nextui-org/button';
 
 export default function Error({
   error,
   reset,
 }: {
-  error: Error;
+  error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useTranslations('error');
+
   useEffect(() => {
     // Log the error to an error reporting service
     /* eslint-disable no-console */
@@ -16,16 +20,11 @@ export default function Error({
   }, [error]);
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-      >
-        Try again
-      </button>
+    <div className="flex flex-col items-center justify-center gap-6 py-32 text-center">
+      <h2 className="text-3xl font-bold">{t('title')}</h2>
+      <Button color="primary" onPress={() => reset()}>
+        {t('retry')}
+      </Button>
     </div>
   );
 }

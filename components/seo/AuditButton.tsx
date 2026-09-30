@@ -1,6 +1,8 @@
 "use client";
 import { Button } from "@nextui-org/react";
 
+import { Link } from "@/navigation";
+
 interface AuditButtonProps {
   label: string;
   variant?: "bordered" | "light";
@@ -10,7 +12,9 @@ interface AuditButtonProps {
 export function AuditButton({ label, variant = "bordered", size = "lg" }: AuditButtonProps) {
   return (
     <Button
+      as={Link}
       className="border-cyan-600 text-cyan-600 dark:border-cyan-400 dark:text-cyan-400"
+      href="/contact"
       size={size}
       variant={variant}
     >

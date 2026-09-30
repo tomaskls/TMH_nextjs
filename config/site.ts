@@ -1,31 +1,25 @@
+export const SITE_URL = 'https://www.tmh.lt';
 
-export const getSiteConfig = (locale: string | undefined = undefined) => {
-  const localePrefix = locale ? `/${locale}` : '';
-  
-  const config = {
-    name: 'Tomorrow\'s Media House',
-    description: 'Make beautiful websites regardless of your design experience.',
-    navItems: [
-      { label: 'websites', href: `${localePrefix}/` },
-      { label: 'seo', href: `${localePrefix}/seo` },
-      { label: 'adds', href: `${localePrefix}/adds` },
-      { label: 'e-stores', href: `${localePrefix}/estores` },
-    ],
-    navMenuItems: [
-      { label: 'websites', href: `${localePrefix}/` },
-      { label: 'seo', href: `${localePrefix}/seo` },
-      { label: 'adds', href: `${localePrefix}/adds` },
-      { label: 'e-stores', href: `${localePrefix}/estores` },
-    ],
-    links: {
-      contact: `${localePrefix}/contact`,
-    },
-  };
-  
-  return config;
+export const CONTACT_INFO = {
+  email: 'info@tmh.lt',
+  phone: '+37060574525',
+  facebook: 'https://facebook.com/tomorrowsmediahouse',
+  instagram: 'https://instagram.com/tomorrowsmediahouse',
 };
 
-
-export const siteConfig = getSiteConfig();
+// Keliai be kalbos prefikso – nuorodos kuriamos per '@/navigation' Link,
+// kuris pats prideda dabartinę kalbą.
+export const siteConfig = {
+  name: "Tomorrow's Media House",
+  navItems: [
+    { label: 'websites', href: '/' },
+    { label: 'seo', href: '/seo' },
+    { label: 'ads', href: '/ads' },
+    { label: 'e-stores', href: '/estores' },
+  ],
+  links: {
+    contact: '/contact',
+  },
+} as const;
 
 export type SiteConfig = typeof siteConfig;

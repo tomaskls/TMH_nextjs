@@ -1,30 +1,25 @@
 'use client';
 import React from 'react';
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
 import { Button } from '@nextui-org/button';
+
+import { usePathname, useRouter } from '@/navigation';
 
 export const LanguageSwitch = () => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-
-  const toggleLocale = () => {
-    const newLocale = locale === 'en' ? 'lt' : 'en';
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
-
-    router.push(newPath);
-  };
+  const newLocale = locale === 'en' ? 'lt' : 'en';
 
   return (
     <Button
-      className=""
-      color='secondary'
+      aria-label={newLocale === 'lt' ? 'Perjungti į lietuvių kalbą' : 'Switch to English'}
+      color="secondary"
       size="sm"
       variant="solid"
-      onPress={toggleLocale}
+      onPress={() => router.replace(pathname, { locale: newLocale })}
     >
-      {locale === 'en' ? 'LT' : 'EN'}
+      {newLocale.toUpperCase()}
     </Button>
   );
 };
