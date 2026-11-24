@@ -1,0 +1,96 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f4f3ee;
+  --color-paper-2: #eae8e0;
+  --color-ink: #0f100d;
+  --color-ink-2: #1b1c18;
+  --color-ink-3: #2a2b26;
+  --color-muted: #66675f;
+  --color-line: #d9d7cd;
+  --color-lime: #c8f23c;
+  --color-lime-2: #b3dc22;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    @apply bg-lime text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ink;
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+}
+
+/* Smulkus taškinis tinklelis tamsiems blokams */
+@utility bg-dots {
+  background-image: radial-gradient(
+    rgb(255 255 255 / 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+@utility bg-grid-light {
+  background-image:
+    linear-gradient(to right, rgb(15 16 13 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(15 16 13 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}

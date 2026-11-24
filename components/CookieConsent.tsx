@@ -1,168 +1,219 @@
-"use client"
-import { useState, useEffect } from 'react';
-import { Button, Checkbox, Tooltip } from '@nextui-org/react';
-import { useTranslations } from 'next-intl';
+'use client';
 
-type CookieSettings = {
-  essential: boolean;
-  analytics: boolean;
-  marketing: boolean;
-};
+import { useEffect, useState } from 'react';
 
-const STORAGE_KEY = 'cookieConsent';
+import {
+  CONSENT_STORAGE_KEY as STORAGE_KEY,
+  OPEN_COOKIE_SETTINGS_EVENT as OPEN_EVENT,
+} from '@/lib/consent';
 
-// Įvykis, kuriuo slapukų nustatymus galima atidaryti iš bet kurios vietos (pvz. poraštės)
-export const OPEN_COOKIE_SETTINGS_EVENT = 'open-cookie-settings';
+type Consent = { essential: true; analytics: boolean; marketing: boolean };
 
-const readStoredSettings = (): CookieSettings | null => {
+function readStored(): Consent | null {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(STORAGE_KEY);
 
-    return stored ? (JSON.parse(stored) as CookieSettings) : null;
+    return raw ? { ...(JSON.parse(raw) as Consent), essential: true } : null;
   } catch {
     return null;
   }
-};
+}
 
-const applyConsent = (settings: CookieSettings) => {
-  const ad = settings.marketing ? 'granted' : 'denied';
+function applyConsent(c: Consent) {
+  const ad = c.marketing ? 'granted' : 'denied';
 
   window.gtag?.('consent', 'update', {
-    analytics_storage: settings.analytics ? 'granted' : 'denied',
+    analytics_storage: c.analytics ? 'granted' : 'denied',
     ad_storage: ad,
     ad_user_data: ad,
     ad_personalization: ad,
   });
-};
+}
 
 export default function CookieConsent() {
-  const t = useTranslations('cookies');
-  const [showConsent, setShowConsent] = useState(false);
+  const [visible, setVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [cookieSettings, setCookieSettings] = useState<CookieSettings>({
-    essential: true, // Essential cookies are always required
+  const [consent, setConsent] = useState<Consent>({
+    essential: true,
     analytics: false,
     marketing: false,
   });
 
   useEffect(() => {
-    // Išsaugotas sutikimas pritaikomas jau layout'o consent skripte,
-    // čia tik užpildome nustatymų formą arba parodome juostą.
-    const saved = readStoredSettings();
+    const saved = readStored();
 
-    if (saved) {
-      setCookieSettings({ ...saved, essential: true });
-    } else {
-      setShowConsent(true);
-    }
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage pasiekiamas tik naršyklėje
+    if (saved) setConsent(saved);
+    else setVisible(true);
 
-    const openSettings = () => {
-      setShowConsent(true);
+    const open = () => {
+      const current = readStored();
+
+      if (current) setConsent(current);
       setShowSettings(true);
+      setVisible(true);
     };
 
-    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, openSettings);
+    window.addEventListener(OPEN_EVENT, open);
 
-    return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, openSettings);
+    return () => window.removeEventListener(OPEN_EVENT, open);
   }, []);
 
-  const saveConsent = (settings: CookieSettings) => {
+  const save = (c: Consent) => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(c));
     } catch {
       // Naršyklė neleidžia saugoti – sutikimas galios tik šiam apsilankymui
     }
-    setCookieSettings(settings);
-    setShowConsent(false);
+    setConsent(c);
+    applyConsent(c);
+    setVisible(false);
     setShowSettings(false);
-    applyConsent(settings);
   };
 
-  const handleSettingChange = (key: keyof CookieSettings, value: boolean) => {
-    if (key === 'essential') return; // Can't toggle essential cookies
-
-    setCookieSettings((prev) => ({ ...prev, [key]: value }));
-  };
-
-  if (!showConsent) {
-    return null;
-  }
+  if (!visible) return null;
 
   return (
     <div
-      aria-label={t('cookieConsentTitle')}
-      className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-md border-t border-divider shadow-lg"
+      aria-label="Slapukų nustatymai"
+      aria-live="polite"
+      className="fixed inset-x-3 bottom-3 z-50 rounded-2xl border border-line bg-white p-5 shadow-[0_20px_60px_-15px_rgb(15_16_13/0.35)] sm:inset-x-auto sm:left-5 sm:bottom-5 sm:max-w-[420px]"
       role="dialog"
     >
-      <div className="container mx-auto max-w-7xl">
-        {showSettings ? (
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{t('cookieSettings')}</h3>
+      <p className="font-medium">Slapukai</p>
 
-            <div className="space-y-3">
-              <div className="flex items-start gap-2">
-                <Checkbox isDisabled isSelected={cookieSettings.essential}>
-                  {t('essentialCookies')}
-                </Checkbox>
-                <Tooltip content={t('essentialCookiesInfo')}>
-                  <span className="cursor-help text-xs bg-default-100 px-1 rounded-full">?</span>
-                </Tooltip>
-              </div>
-
-              <div className="flex items-start gap-2">
-                <Checkbox
-                  isSelected={cookieSettings.analytics}
-                  onValueChange={(v) => handleSettingChange('analytics', v)}
-                >
-                  {t('analyticsCookies')}
-                </Checkbox>
-                <Tooltip content={t('analyticsCookiesInfo')}>
-                  <span className="cursor-help text-xs bg-default-100 px-1 rounded-full">?</span>
-                </Tooltip>
-              </div>
-
-              <div className="flex items-start gap-2">
-                <Checkbox
-                  isSelected={cookieSettings.marketing}
-                  onValueChange={(v) => handleSettingChange('marketing', v)}
-                >
-                  {t('marketingCookies')}
-                </Checkbox>
-                <Tooltip content={t('marketingCookiesInfo')}>
-                  <span className="cursor-help text-xs bg-default-100 px-1 rounded-full">?</span>
-                </Tooltip>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-2 mt-4">
-              <Button color="primary" onPress={() => saveConsent(cookieSettings)}>
-                {t('savePreferences')}
-              </Button>
-              <Button variant="flat" onPress={() => setShowSettings(false)}>
-                {t('back')}
-              </Button>
-            </div>
+      {showSettings ? (
+        <div className="mt-3 space-y-3">
+          <Toggle
+            checked
+            disabled
+            description="Reikalingi svetainės veikimui."
+            label="Būtinieji"
+          />
+          <Toggle
+            checked={consent.analytics}
+            description="Padeda suprasti, kaip lankytojai naudojasi svetaine."
+            label="Analitiniai"
+            onChange={(v) => setConsent((c) => ({ ...c, analytics: v }))}
+          />
+          <Toggle
+            checked={consent.marketing}
+            description="Leidžia matuoti reklamos efektyvumą."
+            label="Rinkodaros"
+            onChange={(v) => setConsent((c) => ({ ...c, marketing: v }))}
+          />
+          <div className="flex flex-wrap gap-2 pt-2">
+            <PrimaryButton onClick={() => save(consent)}>Išsaugoti</PrimaryButton>
+            <SecondaryButton onClick={() => setShowSettings(false)}>
+              Atgal
+            </SecondaryButton>
           </div>
-        ) : (
-          <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
-            <div>
-              <h3 className="text-lg font-semibold">{t('cookieConsentTitle')}</h3>
-              <p className="mt-1 text-default-500 max-w-2xl">{t('cookieConsentText')}</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <Button color="primary" onPress={() => saveConsent({ essential: true, analytics: true, marketing: true })}>
-                {t('acceptAll')}
-              </Button>
-              <Button variant="flat" onPress={() => setShowSettings(true)}>
-                {t('customizeSettings')}
-              </Button>
-              <Button variant="light" onPress={() => saveConsent({ essential: true, analytics: false, marketing: false })}>
-                {t('essentialOnly')}
-              </Button>
-            </div>
+        </div>
+      ) : (
+        <>
+          <p className="mt-1.5 text-sm leading-relaxed text-muted">
+            Naudojame slapukus svetainės lankomumui analizuoti ir reklamai
+            matuoti. Galite sutikti su visais arba pasirinkti, kuriuos leisti.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <PrimaryButton
+              onClick={() =>
+                save({ essential: true, analytics: true, marketing: true })
+              }
+            >
+              Priimti visus
+            </PrimaryButton>
+            <SecondaryButton
+              onClick={() =>
+                save({ essential: true, analytics: false, marketing: false })
+              }
+            >
+              Tik būtinieji
+            </SecondaryButton>
+            <button
+              className="h-10 px-2 text-sm text-muted underline underline-offset-4 hover:text-ink"
+              type="button"
+              onClick={() => setShowSettings(true)}
+            >
+              Nustatymai
+            </button>
           </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
+  );
+}
+
+export function CookieSettingsButton() {
+  return (
+    <button
+      className="text-left underline-offset-4 transition-colors hover:text-paper hover:underline"
+      type="button"
+      onClick={() => window.dispatchEvent(new Event(OPEN_EVENT))}
+    >
+      Slapukų nustatymai
+    </button>
+  );
+}
+
+function PrimaryButton(props: { onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button
+      className="h-10 rounded-full bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-ink-3"
+      type="button"
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
+  );
+}
+
+function SecondaryButton(props: { onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button
+      className="h-10 rounded-full border border-ink/15 px-5 text-sm font-medium transition-colors hover:border-ink/40"
+      type="button"
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
+  );
+}
+
+function Toggle({
+  label,
+  description,
+  checked,
+  disabled,
+  onChange,
+}: {
+  label: string;
+  description: string;
+  checked: boolean;
+  disabled?: boolean;
+  onChange?: (v: boolean) => void;
+}) {
+  return (
+    <label
+      className={`flex items-start justify-between gap-4 rounded-xl bg-paper px-4 py-3 ${disabled ? 'opacity-70' : 'cursor-pointer'}`}
+    >
+      <span>
+        <span className="block text-sm font-medium">{label}</span>
+        <span className="block text-[13px] leading-snug text-muted">
+          {description}
+        </span>
+      </span>
+      <input
+        checked={checked}
+        className="peer sr-only"
+        disabled={disabled}
+        type="checkbox"
+        onChange={(e) => onChange?.(e.target.checked)}
+      />
+      <span
+        aria-hidden
+        className="relative mt-0.5 h-6 w-10 shrink-0 rounded-full bg-line transition-colors after:absolute after:top-0.5 after:left-0.5 after:size-5 after:rounded-full after:bg-white after:shadow after:transition-transform peer-checked:bg-ink peer-checked:after:translate-x-4 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-ink"
+      />
+    </label>
   );
 }
