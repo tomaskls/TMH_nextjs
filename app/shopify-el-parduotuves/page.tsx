@@ -219,12 +219,12 @@ function HeroCollage() {
       <BrowserShot
         className="absolute top-0 right-0 w-[88%] rotate-[2deg]"
         domain="epardavejas.lt"
-        src="/projects/epardavejas.png"
+        src="/projects/epardavejas.webp"
       />
       <BrowserShot
         className="absolute bottom-0 left-0 w-[80%] -rotate-[3deg]"
         domain="andromedakristalai.lt"
-        src="/projects/andromedakristalai.png"
+        src="/projects/andromedakristalai.webp"
       />
       <span className="absolute right-6 bottom-10 rotate-[4deg] rounded-full bg-lime px-4 py-2 text-sm font-medium shadow-lg">
         + automatizuoti užsakymai

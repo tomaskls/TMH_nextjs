@@ -21,7 +21,7 @@ npm run lint
 | Kontaktai, meniu, GA ID                   | `config/site.ts`          |
 | Kainos (rodomos visuose puslapiuose)      | `config/pricing.ts`       |
 | Darbų sąrašas (portfolio)                 | `config/projects.ts`      |
-| Darbų ekrano nuotraukos (1440×900)        | `public/projects/`        |
+| Darbų nuotraukos: WebP, 1000×625, ~50 KB  | `public/projects/`        |
 | Spalvos, šriftai                          | `app/globals.css`         |
 | Puslapių tekstai                          | `app/**/page.tsx`         |
 | Seni adresai (`/lt/...`, `/en/...`) → nauji | `next.config.ts` redirects |

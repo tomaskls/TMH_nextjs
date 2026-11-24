@@ -3,6 +3,9 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
+  // Nuotraukos public/projects jau sumažintos ir WebP formatu, todėl
+  // Vercel Image Optimization nenaudojamas – failai tiekiami tokie, kokie yra.
+  images: { unoptimized: true },
   turbopack: {
     rules: {
       '*.css': {
